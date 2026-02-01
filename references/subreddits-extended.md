@@ -653,6 +653,38 @@ Detailed analysis for additional subreddits beyond the core set. Reference this 
 - Loves: emotional honesty, psychological insight, shared struggles
 - Hates: self-promotion, marketing language, AI buzzwords, listicles
 
+### ⚠️ What Gets Downvoted/Ignored in r/Productivity
+
+**Instant Failure Patterns:**
+- Listicle format ("5 things I learned...", "3 habits that changed...")
+- Any mention of "game-changer" or "life-changing"
+- Tool recommendations without personal struggle context
+- Overly structured posts that read like blog articles
+- Titles with colons or em-dashes (essay format signals)
+- Perfect narrative arcs with clean resolutions
+- "Here's what worked for me" without the messy middle
+- Productivity advice from someone who sounds like they have it figured out
+
+**Title Red Flags (will be scrolled past):**
+- "My Productivity Journey: What I Learned" ❌
+- "The Ultimate Guide to..." ❌
+- "How I Finally..." ❌
+- "X Things That Changed My Life" ❌
+
+**Title Green Flags (will get clicks):**
+- "I realized I wasn't actually lazy, I was just..." ✓
+- "Does anyone else struggle with..." ✓
+- "I thought my problem was X but it was actually Y" ✓
+- "finally figured out why I keep failing at..." ✓
+
+**Body Text Failures:**
+- Starting with "I wanted to share..."
+- Numbered lists of tips
+- Mentioning specific apps without a personal struggle story
+- Ending with inspirational call-to-action
+- Perfect grammar and structure throughout
+- No uncertainty or self-doubt expressed
+
 ---
 
 ## r/nocode (33.4K weekly visitors | 1.1K weekly contributions)

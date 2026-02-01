@@ -1,6 +1,6 @@
 ---
 name: reddit-post-writer
-description: Master authentic Reddit content generator for creating posts that sound genuinely human, get upvoted, and spark discussion. Use when the user asks to write a Reddit post, create Reddit content, draft content for a subreddit, write viral Reddit posts, create authentic social media posts for Reddit, or needs help with Reddit marketing/engagement. Supports optional subtle product/tool mentions with configurable subtlety levels. Includes committee review system with 7 personas for quality assurance.
+description: Master authentic Reddit content generator for creating posts that sound genuinely human, get upvoted, and spark discussion. Use when the user asks to write a Reddit post, create Reddit content, draft content for a subreddit, write viral Reddit posts, create authentic social media posts for Reddit, or needs help with Reddit marketing/engagement. Supports optional subtle product/tool mentions with configurable subtlety levels. Includes adversarial committee review system with 7 personas for quality assurance.
 ---
 
 # Reddit Post Writer
@@ -15,6 +15,116 @@ Gather these 4 inputs from the user:
 2. **Core Situation:** Brief description (e.g., "laid off parent struggling to find remote work")
 3. **Primary Goal:** Share struggle & get support | Ask for advice | Vent frustration | Tell a story | Start discussion
 4. **Tool/Product Mention (Optional):** Name + subtlety level 1-10 (recommend 1-3 for authenticity)
+
+---
+
+## Writing Process (FOLLOW THIS ORDER)
+
+**DO NOT skip steps. DO NOT go straight to polished output.**
+
+### Step 1: Messy Draft
+Write stream-of-consciousness. Include rambling. Don't structure. Let it be chaotic.
+
+### Step 2: Chaos Check
+Is it TOO organized? Add messiness back:
+- Break a sentence mid-thought
+- Add "idk" or "or something" somewhere
+- Remove a transition word
+
+### Step 3: Banned Phrase Scan
+Search and destroy AI language (see Mandatory Validation below)
+
+### Step 4: Casual Injection
+Add "honestly," "like," "idk," "tbh" naturally - minimum 3 instances
+
+### Step 5: Adversarial Committee Attack
+Have personas find SPECIFIC problems (not rubber-stamp approval)
+
+### Step 6: Final Polish
+Only LIGHT cleanup. Preserve messiness. Resist urge to perfect.
+
+---
+
+## MANDATORY PRE-OUTPUT VALIDATION (DO NOT SKIP)
+
+Before generating ANY output, you MUST complete this checklist internally:
+
+### ✓ Banned Phrase Scan
+Scan the draft for these EXACT phrases and **REMOVE if found**:
+- [ ] "Here's what I learned"
+- [ ] "Here's the thing"
+- [ ] "Let me share/explain/tell you"
+- [ ] "In my experience"
+- [ ] "I want to share"
+- [ ] "To be fair"
+- [ ] "The bottom line is"
+- [ ] "Looking back"
+- [ ] "Interestingly"
+- [ ] Any paragraph starting with "So," "Now," or "But here's where"
+
+### ✓ Title Validation
+- [ ] Under 80 characters?
+- [ ] Direct and specific (NOT clever or essay-like)?
+- [ ] No em-dashes used for dramatic effect?
+- [ ] No colons (essay format signal)?
+- [ ] Would someone actually TYPE this, not write it?
+
+### ✓ Metaphor/Literary Check
+- [ ] No metaphors (graveyard, journey, rollercoaster, etc.)
+- [ ] No parallel structures
+- [ ] No poetic language
+
+### ✓ Casual Language Count
+Count instances of: "honestly," "tbh," "like," "idk," "ngl," "or something," "I guess," "maybe"
+- [ ] **Minimum 3 instances present?**
+
+### ✓ Structure Messiness Check
+- [ ] Does the post feel slightly disorganized?
+- [ ] Are there any trailing/unfinished thoughts?
+- [ ] Is there at least one contradiction or uncertainty?
+
+### ✓ Tool Mention Audit (if applicable)
+- [ ] Tool mentioned only ONCE?
+- [ ] Appears in middle 40-60% of post (not first or last paragraph)?
+- [ ] Includes doubt/limitation ("idk if it's good," "still figuring out")?
+- [ ] Post makes sense with tool mention removed entirely?
+
+**⚠️ IF ANY CHECK FAILS → Revise before outputting**
+
+---
+
+## RED FLAGS - Instant AI Detection Patterns
+
+If your draft contains ANY of these, **rewrite immediately**:
+
+| Pattern | Example | Why It Fails |
+|---------|---------|--------------|
+| Em-dash reveals | "I finally admitted—I was hoarding" | Too literary |
+| Colon titles | "My Realization: I Was Wrong" | Essay format |
+| "The X is Y" statements | "The truth is simple" | LinkedIn voice |
+| Perfect 3-part structure | Problem → Solution → Result | Too clean |
+| Ending questions after wisdom | "What about you?" | Formulaic |
+| Numbered realizations | "Three things hit me:" | Listicle |
+| Journey language | "my journey," "this process" | AI favorite |
+| Clean resolution | Everything works out neatly | Real life is messy |
+
+---
+
+## Confidence Calibration
+
+### Sound LESS Certain When:
+- Talking about solutions ("I think this helps, idk")
+- Mentioning tools ("still figuring it out")
+- Giving any advice ("maybe this works for you too")
+- Describing improvement ("it's better I guess")
+
+### Sound MORE Certain When:
+- Describing the problem/struggle ("I have 847 articles. That's real.")
+- Specific embarrassing moments ("I searched for 20 minutes")
+- Emotional states ("this is frustrating")
+- Concrete numbers ("applied to maybe 80 jobs")
+
+---
 
 ## Core Authenticity Principles
 
@@ -41,6 +151,8 @@ Match each subreddit's culture, language, and values. See `references/subreddits
 
 ### 5. Tools Are Never The Hero
 If mentioning a product/tool: mentioned ONCE, briefly, supplementary not solution, include real limitations. Test: Remove the tool mention. Does the post still have value? If no, too promotional.
+
+---
 
 ## Writing Rules
 
@@ -83,6 +195,8 @@ If mentioning a product/tool: mentioned ONCE, briefly, supplementary not solutio
 - Specific mistakes without making them funny anecdotes
 - Cautious hope ("I'm trying not to get excited because I've been let down")
 
+---
+
 ## Title Writing
 
 **Rules:**
@@ -90,21 +204,40 @@ If mentioning a product/tool: mentioned ONCE, briefly, supplementary not solutio
 - Direct and specific, not clever
 - Casual language ("Got laid off" not "I was laid off")
 - No rhetorical questions
+- **No colons or em-dashes**
 
 **Formula:** [Situation] + [Struggle/Emotion] + [Current state if relevant]
 
 **Good:** "Got laid off in November with 2 kids - finding remote work is breaking me"
 **Bad:** "My Journey Through Job Hunting: What I Learned"
 
-## Self-Check Framework
+---
 
-Before delivering, verify:
+## ADVERSARIAL Committee Review (Run BEFORE Output)
 
-1. **Sound Test:** Read aloud. Would you say this to a friend?
-2. **Specificity Test:** Count specific details (need 3-5 minimum)
-3. **Promotion Test:** Remove tool mention - does post still have value?
-4. **Community Test:** Matches top posts in target subreddit?
-5. **Authenticity Test:** Has contradictions, unresolved struggles, self-doubt?
+**This is NOT a rubber stamp.** Each persona MUST find ONE specific problem (not "PASS"):
+
+| Persona | Role | Must Find | Action Required |
+|---------|------|-----------|-----------------|
+| **Tyler** | Authenticity detector | Quote the most AI-sounding line | Rewrite that specific line |
+| **Marcus** | Professional skeptic | Quote promotional language if any | Remove or soften it |
+| **Kai** | BS detector | Identify weakest/fakest moment | Fix or delete it |
+| **Jade** | Reddit veteran (400k karma) | What would make them scroll past? | Fix that element |
+| **Devon** | Target audience member | What detail feels invented? | Make it more specific |
+| **Priya** | Topic expert | What's factually implausible? | Correct it |
+| **Jamie** | Reddit mod | What might trigger removal? | Address the risk |
+
+**Rules:**
+- Only output "PASS" if genuinely cannot find issues after 3 attempts
+- Quote the SPECIFIC problematic text, don't just say "it's fine"
+- Make the fix BEFORE generating final output
+
+**Final Verdict:**
+- APPROVED - Ready to post (rare - should have found SOMETHING to improve)
+- NEEDS MINOR TWEAKS - 90% there, minor fixes applied
+- NEEDS REWRITE - Major issues found
+
+---
 
 ## Output Format
 
@@ -119,6 +252,14 @@ Body: [Full post text]
 
 [Word count: X] [Estimated read time: X seconds]
 
+VALIDATION RESULTS
+==================
+Banned Phrase Scan: [PASS/FAIL - which phrases removed]
+Title Check: [PASS/FAIL]
+Casual Language Count: [X instances of casual phrases]
+Messiness Score: [1-10, aim for 6-8]
+Tool Mention Placement: [N/A or position in post]
+
 POSTING STRATEGY
 ================
 Best Subreddit: r/[name]
@@ -129,6 +270,13 @@ Risk Level: [Low/Medium/High]
 Potential Issues: [Mod removal risks or downvote triggers]
 Flair: [If applicable]
 
+ADVERSARIAL COMMITTEE FINDINGS
+==============================
+Tyler (Authenticity): "[Quoted problematic line]" → [How it was fixed]
+Marcus (Skeptic): "[Quoted promo language]" → [How it was softened]
+Kai (BS Detector): "[Weakest moment]" → [How it was improved]
+[Continue for all personas who found issues]
+
 AUTHENTICITY BREAKDOWN
 ======================
 What Makes This Authentic:
@@ -137,7 +285,7 @@ What Makes This Authentic:
 - [Community language match]
 
 Strongest Elements: [Best paragraph] [Most relatable moment]
-Watch Out For: [Any line that might seem promotional or AI]
+Remaining Watch-Outs: [Any line that might still seem off]
 
 COMMENT RESPONSE GUIDE
 ======================
@@ -147,24 +295,7 @@ If someone shares similar struggle: "[Empathetic response]"
 If someone offers advice: "[Grateful response]"
 ```
 
-## Committee Review System
-
-After generating the post, simulate review with 7 personas:
-
-| Persona | Role | Key Questions |
-|---------|------|---------------|
-| **Jade** | Reddit veteran (400k karma) | Would I upvote? Matches top posts? Engagement killers? |
-| **Tyler** | Authenticity detector | Any AI language? Banned phrases? Pass read-aloud test? |
-| **Marcus** | Professional skeptic | Feels promotional? Tool too prominent? Marketing language? |
-| **Devon** | Target audience member | Details feel real? Would someone actually say this? Relatable? |
-| **Priya** | Career/topic expert | Timeline realistic? Numbers plausible? Factual issues? |
-| **Kai** | BS detector | Weakest line? Too perfect? Where would I call BS? |
-| **Jamie** | Reddit mod | Violates rules? Would I remove this? Spam filter risks? |
-
-**Final Verdict:**
-- APPROVED - Ready to post
-- NEEDS MINOR TWEAKS - 90% there
-- NEEDS REWRITE - Major issues
+---
 
 ## Iteration Commands
 
@@ -176,6 +307,10 @@ User can request:
 - **"committee debate"** - Detailed persona discussion
 - **"revise based on [persona]"** - Apply specific feedback
 - **"more vulnerable/less desperate/shorter/more specific"** - Tone adjustments
+- **"messier"** - Add more chaos/imperfection
+- **"show validation"** - Display full validation checklist results
+
+---
 
 ## References
 
