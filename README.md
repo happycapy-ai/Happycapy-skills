@@ -50,6 +50,11 @@ Generate or edit images using Google's Gemini 3 Pro Image API (Nano Banana Pro).
 
 **Original Source:** [openclaw/openclaw](https://github.com/openclaw/openclaw/tree/main/skills/nano-banana-pro)
 
+### [canvas-design](./skills/canvas-design/)
+Create beautiful visual art in PNG and PDF documents using design philosophy. Use when creating posters, pieces of art, designs, or other static visual pieces. Generates original visual designs through a two-step process: creating a design philosophy (aesthetic movement) and expressing it visually on a canvas. Emphasizes master-level craftsmanship with minimal text and visual-first communication.
+
+**Original Source:** [anthropics/skills](https://github.com/anthropics/skills/tree/main/skills/canvas-design)
+
 ---
 
 ## Installation
@@ -73,6 +78,7 @@ cp -r skills/goplaces ~/.claude/skills/
 cp -r skills/xiaohongshu-recruiter ~/.claude/skills/
 cp -r skills/youtube-music ~/.claude/skills/
 cp -r skills/nano-banana-pro ~/.claude/skills/
+cp -r skills/canvas-design ~/.claude/skills/
 
 # Or install all skills at once
 cp -r skills/* ~/.claude/skills/
@@ -114,11 +120,14 @@ Happycapy-skills/
     ├── youtube-music/
     │   ├── SKILL.md
     │   └── README.md
-    └── nano-banana-pro/
+    ├── nano-banana-pro/
+    │   ├── SKILL.md
+    │   ├── README.md
+    │   └── scripts/
+    │       └── generate_image.py
+    └── canvas-design/
         ├── SKILL.md
-        ├── README.md
-        └── scripts/
-            └── generate_image.py
+        └── README.md
 ```
 
 Each skill follows the standard Claude Code skill structure with a `SKILL.md` file and any necessary reference materials.
