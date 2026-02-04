@@ -51,7 +51,7 @@ Improves the quality of images, especially screenshots, by enhancing resolution,
 **Original Source:** [ComposioHQ/awesome-claude-skills - image-enhancer](https://github.com/ComposioHQ/awesome-claude-skills/tree/master/image-enhancer)
 
 ### [xiaohongshu-recruiter](./skills/xiaohongshu-recruiter/)
-用于在小红书上发布高质量的 AI 相关岗位招聘帖子。包含自动生成极客风格的招聘封面图和详情图，并提供自动化发布脚本。采用 Systemic Flux 设计理念，支持一键发布工作流程。
+Publish high-quality AI job recruitment posts on Xiaohongshu (Little Red Book). Automatically generates geek-style recruitment cover images and detail images, with automated publishing scripts. Built with Systemic Flux design philosophy, supports one-click publishing workflow.
 
 **Original Source:** [iOfficeAI/AionUi](https://github.com/iOfficeAI/AionUi/tree/main/skills/xiaohongshu-recruiter)
 
@@ -86,7 +86,7 @@ Transform data into compelling narratives using visualization, context, and pers
 **Original Source:** [wshobson/agents](https://github.com/wshobson/agents/tree/main/plugins/business-analytics/skills/data-storytelling)
 
 ### [redbook-creator-publish](./skills/redbook-creator-publish/)
-小红书帖子创作与发布技能。用于：(1) 生成小红书风格的帖子内容（标题+正文+标签）(2) 生成帖子相关的配图 (3) 自动上传到小红书创作者平台（默认自动上传，失败时自动提供手动指引） (4) 生成本地预览HTML文件。使用Playwright for Python实现浏览器自动化，支持话题深度搜索，配图采用PNG/JPG格式（9:16竖版比例）。
+Xiaohongshu (Little Red Book) post creation and publishing skill. Features: (1) Generate Xiaohongshu-style post content (title + body + tags), (2) Generate related post images, (3) Auto-upload to Xiaohongshu creator platform (default auto-upload, manual guidance on failure), (4) Generate local preview HTML files. Uses Playwright for Python for browser automation, supports deep topic search, images in PNG/JPG format (9:16 vertical ratio).
 
 **Original Source:** [NeverSight/skills_feed - yanquankun/redbook-creator-publish](https://github.com/NeverSight/skills_feed/tree/main/data/skills-md/yanquankun/redbook-creator-publish/redbook-creator-publish)
 
@@ -101,7 +101,7 @@ Mobile-first design thinking and decision-making for iOS and Android apps. Touch
 **Original Source:** [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/creative-design/mobile-design)
 
 ### [resume-assistant](./skills/resume-assistant/)
-智能简历助手，通过五个专业 AI 代理提供全流程求职支持：(1) 故事挖掘 - 发现经历亮点；(2) 职位推荐 - 匹配合适岗位；(3) 简历优化 - 针对 JD 定制内容；(4) 模拟面试 - 实战演练与反馈；(5) 能力提升 - 差距分析与计划。支持 PDF/DOCX/HTML/Excel 多格式输出，内置中文字体，开箱即用。
+Intelligent resume assistant powered by five specialized AI agents for end-to-end job search support: (1) Story Mining - discover experience highlights, (2) Job Matching - recommend suitable positions, (3) Resume Optimization - customize content for job descriptions, (4) Mock Interviews - practice with feedback, (5) Skill Development - gap analysis and improvement plans. Supports PDF/DOCX/HTML/Excel multi-format output with built-in Chinese fonts, ready to use out of the box.
 
 **Original Source:** [Y1fe1-Yang/resume-assistant-skill](https://github.com/Y1fe1-Yang/resume-assistant-skill)
 
