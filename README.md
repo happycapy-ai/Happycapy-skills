@@ -75,6 +75,11 @@ Use when writing prose humans will read—documentation, commit messages, error 
 
 **Original Source:** [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/enterprise-communication/writing-clearly-and-concisely)
 
+### [redbook-creator-publish](./skills/redbook-creator-publish/)
+小红书帖子创作与发布技能。用于：(1) 生成小红书风格的帖子内容（标题+正文+标签）(2) 生成帖子相关的配图 (3) 自动上传到小红书创作者平台（默认自动上传，失败时自动提供手动指引） (4) 生成本地预览HTML文件。使用Playwright for Python实现浏览器自动化，支持话题深度搜索，配图采用PNG/JPG格式（9:16竖版比例）。
+
+**Original Source:** [NeverSight/skills_feed - yanquankun/redbook-creator-publish](https://github.com/NeverSight/skills_feed/tree/main/data/skills-md/yanquankun/redbook-creator-publish/redbook-creator-publish)
+
 ---
 
 ## Installation
@@ -103,6 +108,7 @@ cp -r skills/canvas-design ~/.claude/skills/
 cp -r skills/slack-gif-creator ~/.claude/skills/
 cp -r skills/data-storytelling ~/.claude/skills/
 cp -r skills/writing-clearly-and-concisely ~/.claude/skills/
+cp -r skills/redbook-creator-publish ~/.claude/skills/
 
 # Or install all skills at once
 cp -r skills/* ~/.claude/skills/
@@ -175,15 +181,18 @@ Happycapy-skills/
     ├── data-storytelling/
     │   ├── SKILL.md
     │   └── README.md
-    └── writing-clearly-and-concisely/
+    ├── writing-clearly-and-concisely/
+    │   ├── SKILL.md
+    │   ├── README.md
+    │   └── elements-of-style/
+    │       ├── 01-introductory.md
+    │       ├── 02-elementary-rules-of-usage.md
+    │       ├── 03-elementary-principles-of-composition.md
+    │       ├── 04-a-few-matters-of-form.md
+    │       └── 05-words-and-expressions-commonly-misused.md
+    └── redbook-creator-publish/
         ├── SKILL.md
-        ├── README.md
-        └── elements-of-style/
-            ├── 01-introductory.md
-            ├── 02-elementary-rules-of-usage.md
-            ├── 03-elementary-principles-of-composition.md
-            ├── 04-a-few-matters-of-form.md
-            └── 05-words-and-expressions-commonly-misused.md
+        └── README.md
 ```
 
 Each skill follows the standard Claude Code skill structure with a `SKILL.md` file and any necessary reference materials.
