@@ -45,6 +45,11 @@ Search and play music tracks on YouTube Music through MCP integration. Enables A
 
 **Original Source:** [instructa/mcp-youtube-music](https://github.com/instructa/mcp-youtube-music)
 
+### [nano-banana-pro](./skills/nano-banana-pro/)
+Generate or edit images using Google's Gemini 3 Pro Image API (Nano Banana Pro). Create images from text descriptions, edit existing images with natural language instructions, or combine up to 14 images into composite scenes. Supports 1K, 2K, and 4K resolutions. Requires uv package manager and GEMINI_API_KEY.
+
+**Original Source:** [openclaw/openclaw](https://github.com/openclaw/openclaw/tree/main/skills/nano-banana-pro)
+
 ---
 
 ## Installation
@@ -67,6 +72,7 @@ cp -r skills/treatment-plans ~/.claude/skills/
 cp -r skills/goplaces ~/.claude/skills/
 cp -r skills/xiaohongshu-recruiter ~/.claude/skills/
 cp -r skills/youtube-music ~/.claude/skills/
+cp -r skills/nano-banana-pro ~/.claude/skills/
 
 # Or install all skills at once
 cp -r skills/* ~/.claude/skills/
@@ -105,9 +111,14 @@ Happycapy-skills/
     │   ├── assets/
     │   ├── scripts/
     │   └── references/
-    └── youtube-music/
+    ├── youtube-music/
+    │   ├── SKILL.md
+    │   └── README.md
+    └── nano-banana-pro/
         ├── SKILL.md
-        └── README.md
+        ├── README.md
+        └── scripts/
+            └── generate_image.py
 ```
 
 Each skill follows the standard Claude Code skill structure with a `SKILL.md` file and any necessary reference materials.
