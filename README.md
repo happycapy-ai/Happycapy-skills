@@ -1,9 +1,14 @@
-# Reddit Post Writer Skill
+# Happycapy Skills
+
+A curated collection of high-quality Claude Code skills to enhance your development workflow.
+
+## Available Skills
+
+### 1. Reddit Post Writer
 
 A Claude Code skill for generating authentic Reddit posts that sound human, avoid AI detection, and spark engagement across 25+ subreddits.
 
-## Features
-
+**Features:**
 - Generate authentic Reddit posts that match subreddit culture
 - 7-persona committee review system for quality assurance
 - Configurable tool/product mentions with subtlety levels (1-10)
@@ -15,111 +20,92 @@ A Claude Code skill for generating authentic Reddit posts that sound human, avoi
   - Lifestyle: r/digitalnomad, r/InternetIsBeautiful
 - Posting strategy recommendations including timing and engagement predictions
 
-## Installation
-
-### For Claude Code Users
-
-Copy the skill to your Claude Code skills directory:
-
-```bash
-# Create the skills directory if it doesn't exist
-mkdir -p ~/.claude/skills
-
-# Clone or copy this repository
-git clone https://github.com/niveshdandyan/reddit-post-skill.git ~/.claude/skills/reddit-post-writer
-```
-
-### Directory Structure
-
-```
-~/.claude/skills/reddit-post-writer/
-├── SKILL.md                                    # Main skill definition
-└── references/
-    ├── tool-mentions.md                        # Guidelines for subtle product mentions
-    ├── examples.md                             # Good vs bad examples
-    ├── subreddits.md                           # Core subreddit guidelines (r/jobs, r/RemoteWork, etc.)
-    ├── subreddits-extended.md                  # 20+ additional subreddit analyses
-    └── subreddit-analysis-claude-agentsofai.md # Deep analysis for r/claude & r/AgentsOfAI
-```
-
-## Usage
-
-Once installed, invoke the skill in Claude Code:
-
+**Usage:**
 ```
 /reddit-post-writer
 ```
 
-The skill will ask for:
-1. **Target Subreddit(s):** e.g., r/jobs, r/RemoteWork, r/Entrepreneur, r/claudecode
-2. **Core Situation:** Brief description of the scenario
-3. **Primary Goal:** Share struggle, ask for advice, vent, tell a story, or start discussion
-4. **Tool/Product Mention (Optional):** Name + subtlety level 1-10
-
-## Output Format
-
-The skill generates:
-- Ready-to-post title and body
-- Posting strategy (timing, expected engagement, risks)
-- Authenticity breakdown
-- Comment response guide
-- Committee review with 7 persona perspectives
-
-## Committee Review System
-
-Each generated post is reviewed by 7 simulated personas:
-
-| Persona | Role |
-|---------|------|
-| Jade | Reddit veteran (400k karma) |
-| Tyler | Authenticity detector |
-| Marcus | Professional skeptic |
-| Devon | Target audience member |
-| Priya | Career/topic expert |
-| Kai | BS detector |
-| Jamie | Reddit mod |
-
-## Supported Subreddits
-
-### Career & Remote Work
-- r/jobs, r/RemoteWork, r/careerguidance, r/antiwork, r/workfromhome, r/digitalnomad
-
-### AI & Technology
-- r/claude, r/AgentsOfAI, r/claudecode, r/claudeexplorers, r/aiagents
-- r/AI_Application, r/AIAgentsInAction, r/AiForSmallBusiness, r/automation
-
-### Entrepreneurship & Business
-- r/Entrepreneur, r/indiehackers, r/founder, r/EntrepreneurRideAlong, r/GrowMyBusiness
-
-### Productivity & Tools
-- r/Productivity, r/ProductivityApps, r/ProductivityCafe, r/nocode, r/InternetIsBeautiful
-
-## Iteration Commands
-
-After receiving output, you can request:
-- `alternatives` - 2-3 different versions
-- `expand [section]` - Detailed analysis
-- `revise [feedback]` - Adjust based on notes
-- `another subreddit` - Adapt for different community
-- `committee debate` - Detailed persona discussion
-- `more vulnerable/less desperate/shorter/more specific` - Tone adjustments
-
-## Core Principles
-
-1. **Real Over Polished** - Messy, contradictory, unresolved
-2. **Specific Over Generic** - One embarrassing detail > ten generic statements
-3. **Struggle Over Solution** - People upvote relatability
-4. **Community Voice** - Match each subreddit's culture
-5. **Tools Are Never The Hero** - Mentioned once, briefly, with limitations
-
-## License
-
-MIT License - See [LICENSE](LICENSE) for details.
-
-## Contributing
-
-Contributions welcome! Please feel free to submit issues or pull requests.
+**Original Source:** [niveshdandyan/reddit-post-skill](https://github.com/niveshdandyan/reddit-post-skill)
 
 ---
 
-**Repository:** [github.com/niveshdandyan/reddit-post-skill](https://github.com/niveshdandyan/reddit-post-skill)
+### 2. Frontend Slides
+
+Create stunning, animation-rich HTML presentations from scratch or by converting PowerPoint files. Zero dependencies - single HTML files that run entirely in the browser.
+
+**Features:**
+- Create animation-rich HTML presentations with zero dependencies
+- Convert PowerPoint files to beautiful web presentations
+- Visual style exploration - see options before choosing
+- 12 distinctive design presets (Bold Signal, Dark Botanical, Neon Cyber, etc.)
+- Responsive and viewport-fitted (no scrolling within slides)
+- Production-quality code with accessibility support
+- Interactive effects: 3D tilt, custom cursors, particle systems
+
+**Best For:**
+- Pitch decks for startups
+- Conference talks and keynotes
+- Teaching and tutorials
+- Internal presentations
+
+**Usage:**
+```
+/frontend-slides
+```
+
+**Original Source:** [zarazhangrui/frontend-slides](https://github.com/zarazhangrui/frontend-slides)
+
+---
+
+## Installation
+
+### For Claude Code Users
+
+Clone this repository to access all curated skills:
+
+```bash
+# Clone the repository
+git clone https://github.com/trickleai/Happycapy-skills.git
+
+# Copy individual skills to your Claude Code skills directory
+mkdir -p ~/.claude/skills
+cp -r Happycapy-skills/reddit-post-writer ~/.claude/skills/
+```
+
+### Directory Structure
+
+Each skill in this collection follows the standard Claude Code skill structure with its own SKILL.md and reference materials.
+
+---
+
+## About This Collection
+
+Happycapy Skills is a curated collection of the best Claude Code skills for developers, content creators, and professionals. Each skill is:
+- Thoroughly tested and production-ready
+- Well-documented with examples
+- Actively maintained and updated
+- Designed to integrate seamlessly with Claude Code
+
+## Contributing
+
+We welcome contributions! If you have a skill you'd like to add to this collection:
+1. Fork this repository
+2. Add your skill in a dedicated folder
+3. Include comprehensive documentation
+4. Submit a pull request
+
+Please ensure your skill follows Claude Code best practices and includes:
+- Clear SKILL.md file
+- Usage examples
+- Any necessary reference materials
+- License information
+
+## License
+
+Each skill in this collection maintains its original license. Please refer to individual skill directories for specific license information.
+
+---
+
+**Repository:** [github.com/trickleai/Happycapy-skills](https://github.com/trickleai/Happycapy-skills)
+
+**Maintained by:** [Trickle AI](https://github.com/trickleai)
