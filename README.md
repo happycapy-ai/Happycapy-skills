@@ -15,6 +15,11 @@ Expert in building 3D experiences for the web using Three.js, React Three Fiber,
 
 **Original Source:** [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/creative-design/3d-web-experience)
 
+### [happycapy-skill-creator](./skills/happycapy-skill-creator/)
+Automated Claude skill creator for HappyCapy environment. Finds and adapts similar skills from anthropics/skills repository using semantic search, LLM-powered adaptation, and auto-fix for compatibility. Creates ready-to-install `.skill` files with 90%+ success rate. Complements the official `/skill-creator` by automating the creation process.
+
+**Original Source:** [Y1fe1-Yang/happycapy-skill-creator](https://github.com/Y1fe1-Yang/happycapy-skill-creator)
+
 ### [reddit-post-writer](./skills/reddit-post-writer/)
 Generate authentic Reddit posts that sound human, avoid AI detection, and spark engagement across 25+ subreddits. Includes 7-persona committee review system and subreddit-specific guidelines for different communities.
 
@@ -75,11 +80,6 @@ Transform data into compelling narratives using visualization, context, and pers
 
 **Original Source:** [wshobson/agents](https://github.com/wshobson/agents/tree/main/plugins/business-analytics/skills/data-storytelling)
 
-### [writing-clearly-and-concisely](./skills/writing-clearly-and-concisely/)
-Use when writing prose humans will read—documentation, commit messages, error messages, explanations, reports, or UI text. Applies Strunk's timeless rules for clearer, stronger, more professional writing. Includes comprehensive guidelines from "The Elements of Style" covering grammar, composition, active voice, concision, and avoiding common AI writing patterns.
-
-**Original Source:** [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/enterprise-communication/writing-clearly-and-concisely)
-
 ### [redbook-creator-publish](./skills/redbook-creator-publish/)
 小红书帖子创作与发布技能。用于：(1) 生成小红书风格的帖子内容（标题+正文+标签）(2) 生成帖子相关的配图 (3) 自动上传到小红书创作者平台（默认自动上传，失败时自动提供手动指引） (4) 生成本地预览HTML文件。使用Playwright for Python实现浏览器自动化，支持话题深度搜索，配图采用PNG/JPG格式（9:16竖版比例）。
 
@@ -95,6 +95,16 @@ Mobile-first design thinking and decision-making for iOS and Android apps. Touch
 
 **Original Source:** [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/creative-design/mobile-design)
 
+### [resume-assistant](./skills/resume-assistant/)
+智能简历助手，通过五个专业 AI 代理提供全流程求职支持：(1) 故事挖掘 - 发现经历亮点；(2) 职位推荐 - 匹配合适岗位；(3) 简历优化 - 针对 JD 定制内容；(4) 模拟面试 - 实战演练与反馈；(5) 能力提升 - 差距分析与计划。支持 PDF/DOCX/HTML/Excel 多格式输出，内置中文字体，开箱即用。
+
+**Original Source:** [Y1fe1-Yang/resume-assistant-skill](https://github.com/Y1fe1-Yang/resume-assistant-skill)
+
+### [film-creator](./skills/film-creator/)
+AI-powered film creation assistant that transforms a single sentence or image into a complete 30-second cinematic film. Automatically generates professional screenplay with 5-scene structure, creates high-quality video for each scene using AI models (Google Veo, OpenAI Sora, BytePlus Seedance), and assembles them into a polished film with FFmpeg. Perfect for social media content, marketing videos, and rapid film prototyping.
+
+**Original Source:** [Y1fe1-Yang/film-creator-skill](https://github.com/Y1fe1-Yang/film-creator-skill)
+
 ---
 
 ## Installation
@@ -105,12 +115,13 @@ Clone this repository and install individual skills:
 
 ```bash
 # Clone the repository
-git clone https://github.com/trickleai/Happycapy-skills.git
+git clone https://github.com/happycapy-ai/Happycapy-skills.git
 cd Happycapy-skills
 
 # Install a specific skill
 mkdir -p ~/.claude/skills
 cp -r skills/3d-web-experience ~/.claude/skills/
+cp -r skills/happycapy-skill-creator ~/.claude/skills/
 cp -r skills/reddit-post-writer ~/.claude/skills/
 cp -r skills/frontend-slides ~/.claude/skills/
 cp -r skills/treatment-plans ~/.claude/skills/
@@ -123,10 +134,11 @@ cp -r skills/canvas-design ~/.claude/skills/
 cp -r skills/claude-code-templates ~/.claude/skills/
 cp -r skills/slack-gif-creator ~/.claude/skills/
 cp -r skills/data-storytelling ~/.claude/skills/
-cp -r skills/writing-clearly-and-concisely ~/.claude/skills/
 cp -r skills/redbook-creator-publish ~/.claude/skills/
 cp -r skills/skill-creator ~/.claude/skills/
 cp -r skills/mobile-design ~/.claude/skills/
+cp -r skills/resume-assistant ~/.claude/skills/
+cp -r skills/film-creator ~/.claude/skills/
 
 # Or install all skills at once
 cp -r skills/* ~/.claude/skills/
@@ -140,6 +152,9 @@ Happycapy-skills/
 ├── LICENSE
 └── skills/
     ├── 3d-web-experience/
+    │   ├── SKILL.md
+    │   └── README.md
+    ├── happycapy-skill-creator/
     │   ├── SKILL.md
     │   └── README.md
     ├── reddit-post-writer/
@@ -202,15 +217,6 @@ Happycapy-skills/
     ├── data-storytelling/
     │   ├── SKILL.md
     │   └── README.md
-    ├── writing-clearly-and-concisely/
-    │   ├── SKILL.md
-    │   ├── README.md
-    │   └── elements-of-style/
-    │       ├── 01-introductory.md
-    │       ├── 02-elementary-rules-of-usage.md
-    │       ├── 03-elementary-principles-of-composition.md
-    │       ├── 04-a-few-matters-of-form.md
-    │       └── 05-words-and-expressions-commonly-misused.md
     ├── redbook-creator-publish/
     │   ├── SKILL.md
     │   └── README.md
@@ -222,23 +228,29 @@ Happycapy-skills/
     │       ├── init_skill.py
     │       ├── package_skill.py
     │       └── quick_validate.py
-    └── mobile-design/
+    ├── mobile-design/
+    │   ├── SKILL.md
+    │   ├── README.md
+    │   ├── decision-trees.md
+    │   ├── mobile-backend.md
+    │   ├── mobile-color-system.md
+    │   ├── mobile-debugging.md
+    │   ├── mobile-design-thinking.md
+    │   ├── mobile-navigation.md
+    │   ├── mobile-performance.md
+    │   ├── mobile-testing.md
+    │   ├── mobile-typography.md
+    │   ├── platform-android.md
+    │   ├── platform-ios.md
+    │   ├── touch-psychology.md
+    │   └── scripts/
+    │       └── mobile_audit.py
+    ├── resume-assistant/
+    │   ├── SKILL.md
+    │   └── README.md
+    └── film-creator/
         ├── SKILL.md
-        ├── README.md
-        ├── decision-trees.md
-        ├── mobile-backend.md
-        ├── mobile-color-system.md
-        ├── mobile-debugging.md
-        ├── mobile-design-thinking.md
-        ├── mobile-navigation.md
-        ├── mobile-performance.md
-        ├── mobile-testing.md
-        ├── mobile-typography.md
-        ├── platform-android.md
-        ├── platform-ios.md
-        ├── touch-psychology.md
-        └── scripts/
-            └── mobile_audit.py
+        └── README.md
 ```
 
 Each skill follows the standard Claude Code skill structure with a `SKILL.md` file and any necessary reference materials.
@@ -305,9 +317,9 @@ The repository itself is licensed under MIT License - see [LICENSE](LICENSE) for
 
 ---
 
-**Repository:** [github.com/trickleai/Happycapy-skills](https://github.com/trickleai/Happycapy-skills)
+**Repository:** [github.com/happycapy-ai/Happycapy-skills](https://github.com/happycapy-ai/Happycapy-skills)
 
-**Maintained by:** [Trickle AI](https://github.com/trickleai)
+**Maintained by:** [Happycapy AI](https://github.com/happycapy-ai)
 
 ## Related Resources
 
