@@ -60,6 +60,11 @@ Create beautiful visual art in PNG and PDF documents using design philosophy. Us
 
 **Original Source:** [anthropics/skills](https://github.com/anthropics/skills/tree/main/skills/canvas-design)
 
+### [claude-code-templates](./skills/claude-code-templates/)
+CLI tool for configuring and monitoring Claude Code with a comprehensive collection of 600+ AI agents, 200+ custom commands, 55+ external service integrations (MCPs), 60+ settings, 39+ hooks, and 14+ project templates. Use when users need to install or manage Claude Code components, browse available templates at aitmpl.com, run analytics/health checks, or set up development workflows. Integrates with Claude Code, Cursor, Cline, and 10+ other AI coding platforms.
+
+**Original Source:** [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates)
+
 ### [slack-gif-creator](./skills/slack-gif-creator/)
 A toolkit for creating animated GIFs optimized for Slack. Provides composable animation primitives, validators for Slack requirements, and utilities for creating custom emoji GIFs (128x128, under 64KB) and message GIFs (480x480, under 2MB). Includes easing functions, frame helpers, and support for animations like shake, pulse, bounce, spin, fade, and more. Draw graphics from scratch using PIL primitives.
 
@@ -110,6 +115,7 @@ cp -r skills/xiaohongshu-recruiter ~/.claude/skills/
 cp -r skills/youtube-music ~/.claude/skills/
 cp -r skills/nano-banana-pro ~/.claude/skills/
 cp -r skills/canvas-design ~/.claude/skills/
+cp -r skills/claude-code-templates ~/.claude/skills/
 cp -r skills/slack-gif-creator ~/.claude/skills/
 cp -r skills/data-storytelling ~/.claude/skills/
 cp -r skills/writing-clearly-and-concisely ~/.claude/skills/
@@ -172,6 +178,9 @@ Happycapy-skills/
     │   └── scripts/
     │       └── generate_image.py
     ├── canvas-design/
+    │   ├── SKILL.md
+    │   └── README.md
+    ├── claude-code-templates/
     │   ├── SKILL.md
     │   └── README.md
     ├── slack-gif-creator/
