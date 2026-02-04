@@ -25,6 +25,11 @@ Generate concise (3-4 page), focused medical treatment plans in LaTeX/PDF format
 
 **Original Source:** [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/treatment-plans)
 
+### [goplaces](./skills/goplaces/)
+Query Google Places API (New) via the goplaces CLI for text search, place details, resolve, and reviews. Modern CLI with human-friendly output by default and JSON format for scripting. Includes advanced filters like open now, minimum rating, location bias, and radius search.
+
+**Original Source:** [steipete/goplaces](https://github.com/steipete/goplaces) via [openclaw/skills](https://github.com/openclaw/skills/tree/main/skills/steipete/goplaces)
+
 ---
 
 ## Installation
@@ -43,6 +48,7 @@ mkdir -p ~/.claude/skills
 cp -r skills/reddit-post-writer ~/.claude/skills/
 cp -r skills/frontend-slides ~/.claude/skills/
 cp -r skills/treatment-plans ~/.claude/skills/
+cp -r skills/goplaces ~/.claude/skills/
 
 # Or install all skills at once
 cp -r skills/* ~/.claude/skills/
@@ -63,12 +69,15 @@ Happycapy-skills/
     │   ├── SKILL.md
     │   ├── STYLE_PRESETS.md
     │   └── LICENSE
-    └── treatment-plans/
+    ├── treatment-plans/
+    │   ├── SKILL.md
+    │   ├── README.md
+    │   ├── assets/
+    │   ├── scripts/
+    │   └── references/
+    └── goplaces/
         ├── SKILL.md
-        ├── README.md
-        ├── assets/
-        ├── scripts/
-        └── references/
+        └── README.md
 ```
 
 Each skill follows the standard Claude Code skill structure with a `SKILL.md` file and any necessary reference materials.
