@@ -20,6 +20,11 @@ Create stunning, animation-rich HTML presentations from scratch or convert Power
 
 **Original Source:** [zarazhangrui/frontend-slides](https://github.com/zarazhangrui/frontend-slides)
 
+### [treatment-plans](./skills/treatment-plans/)
+Generate concise (3-4 page), focused medical treatment plans in LaTeX/PDF format for all clinical specialties. Supports general medical treatment, rehabilitation therapy, mental health care, chronic disease management, perioperative care, and pain management. Includes SMART goal frameworks, evidence-based interventions with minimal text citations, regulatory compliance (HIPAA), and professional formatting. Prioritizes brevity and clinical actionability.
+
+**Original Source:** [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/scientific/treatment-plans)
+
 ---
 
 ## Installation
@@ -37,6 +42,7 @@ cd Happycapy-skills
 mkdir -p ~/.claude/skills
 cp -r skills/reddit-post-writer ~/.claude/skills/
 cp -r skills/frontend-slides ~/.claude/skills/
+cp -r skills/treatment-plans ~/.claude/skills/
 
 # Or install all skills at once
 cp -r skills/* ~/.claude/skills/
@@ -53,10 +59,16 @@ Happycapy-skills/
     │   ├── SKILL.md
     │   ├── references/
     │   └── LICENSE
-    └── frontend-slides/
+    ├── frontend-slides/
+    │   ├── SKILL.md
+    │   ├── STYLE_PRESETS.md
+    │   └── LICENSE
+    └── treatment-plans/
         ├── SKILL.md
-        ├── STYLE_PRESETS.md
-        └── LICENSE
+        ├── README.md
+        ├── assets/
+        ├── scripts/
+        └── references/
 ```
 
 Each skill follows the standard Claude Code skill structure with a `SKILL.md` file and any necessary reference materials.
