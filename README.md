@@ -70,6 +70,11 @@ Generate or edit images using Google's Gemini 3 Pro Image API (Nano Banana Pro).
 
 **Original Source:** [openclaw/openclaw](https://github.com/openclaw/openclaw/tree/main/skills/nano-banana-pro)
 
+### [video-frames](./skills/video-frames/)
+Extract single frames or create quick thumbnails from videos using ffmpeg. Supports extracting frames by timestamp, frame index, or first frame. Perfect for video analysis, creating thumbnails, inspecting specific moments, or extracting UI frames. Outputs to JPG for quick sharing or PNG for crisp quality.
+
+**Original Source:** [clawdbot/clawdbot](https://github.com/clawdbot/clawdbot/tree/main/skills/video-frames)
+
 ### [canvas-design](./skills/canvas-design/)
 Create beautiful visual art in PNG and PDF documents using design philosophy. Use when creating posters, pieces of art, designs, or other static visual pieces. Generates original visual designs through a two-step process: creating a design philosophy (aesthetic movement) and expressing it visually on a canvas. Emphasizes master-level craftsmanship with minimal text and visual-first communication.
 
@@ -147,6 +152,7 @@ cp -r skills/video-downloader ~/.claude/skills/
 cp -r skills/xiaohongshu-recruiter ~/.claude/skills/
 cp -r skills/youtube-music ~/.claude/skills/
 cp -r skills/nano-banana-pro ~/.claude/skills/
+cp -r skills/video-frames ~/.claude/skills/
 cp -r skills/canvas-design ~/.claude/skills/
 cp -r skills/claude-code-templates ~/.claude/skills/
 cp -r skills/slack-gif-creator ~/.claude/skills/
@@ -222,6 +228,10 @@ Happycapy-skills/
     │   ├── README.md
     │   └── scripts/
     │       └── generate_image.py
+    ├── video-frames/
+    │   ├── SKILL.md
+    │   └── scripts/
+    │       └── frame.sh
     ├── canvas-design/
     │   ├── SKILL.md
     │   └── README.md
