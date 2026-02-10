@@ -1,0 +1,10 @@
+# HappyCapy Skill Creator Dependencies
+
+# HTTP requests for AI Gateway
+requests>=2.31.0
+
+# No anthropic SDK needed - we use AI Gateway directly
+# anthropic>=0.18.0  # ❌ Not needed
+
+# Optional: for better error handling
+urllib3>=2.0.0
