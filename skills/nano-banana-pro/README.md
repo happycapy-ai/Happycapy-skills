@@ -11,15 +11,15 @@ Generate or edit images using Google's Gemini 3 Pro Image API (Nano Banana Pro).
 
 ## Requirements
 
-- `uv` package manager (install via Homebrew: `brew install uv`)
-- `GEMINI_API_KEY` environment variable with your Google API key
+- Python 3.11+
+- `AI_GATEWAY_API_KEY` environment variable (recommended) or `GEMINI_API_KEY` for direct API access
 
 ## Usage
 
 ### Generate a new image
 
 ```bash
-uv run ~/.claude/skills/nano-banana-pro/scripts/generate_image.py \
+python3 ~/.claude/skills/nano-banana-pro/scripts/generate_image.py \
   --prompt "a serene mountain landscape at sunset" \
   --filename "sunset-mountains.png" \
   --resolution 2K
@@ -28,7 +28,7 @@ uv run ~/.claude/skills/nano-banana-pro/scripts/generate_image.py \
 ### Edit an existing image
 
 ```bash
-uv run ~/.claude/skills/nano-banana-pro/scripts/generate_image.py \
+python3 ~/.claude/skills/nano-banana-pro/scripts/generate_image.py \
   --prompt "add northern lights to the sky" \
   --filename "edited-mountains.png" \
   --input-image sunset-mountains.png \
@@ -38,7 +38,7 @@ uv run ~/.claude/skills/nano-banana-pro/scripts/generate_image.py \
 ### Combine multiple images
 
 ```bash
-uv run ~/.claude/skills/nano-banana-pro/scripts/generate_image.py \
+python3 ~/.claude/skills/nano-banana-pro/scripts/generate_image.py \
   --prompt "create a collage of these vacation photos" \
   --filename "vacation-collage.png" \
   -i photo1.png -i photo2.png -i photo3.png
@@ -46,22 +46,30 @@ uv run ~/.claude/skills/nano-banana-pro/scripts/generate_image.py \
 
 ## Configuration
 
-Set your API key via environment variable:
+### Option 1: AI Gateway (Recommended)
+
+Set your AI Gateway API key via environment variable:
 
 ```bash
-export GEMINI_API_KEY="your-api-key-here"
+export AI_GATEWAY_API_KEY="your-gateway-key-here"
 ```
 
-Or configure it in OpenClaw's config file at `~/.openclaw/openclaw.json`:
+This will use HappyCapy's AI Gateway for image generation.
 
-```json
-{
-  "skills": {
-    "nano-banana-pro": {
-      "apiKey": "your-api-key-here"
-    }
-  }
-}
+### Option 2: Direct Gemini API
+
+Set your Gemini API key via environment variable:
+
+```bash
+export GEMINI_API_KEY="your-gemini-key-here"
+```
+
+Or pass it directly via command line:
+
+```bash
+python3 ~/.claude/skills/nano-banana-pro/scripts/generate_image.py \
+  --api-key "your-api-key-here" \
+  --prompt "your prompt here"
 ```
 
 ## Installation
