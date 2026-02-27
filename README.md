@@ -165,6 +165,11 @@ Get current weather and forecasts using free services without requiring API keys
 
 **Original Source:** [openclaw/openclaw](https://github.com/openclaw/openclaw/tree/main/skills/weather)
 
+#### [office-status-ui](./skills/office-status-ui/)
+Visualize AI assistant working status with a 3D-style virtual office. A cute capybara character moves between 5 functional areas (desk, meeting room, server room, lounge, library) based on 30+ work states. Features smooth walking animation, real-time statistics, and demo mode.
+
+**Original Source:** [AchengBusiness/happycapy-office-ui](https://github.com/AchengBusiness/happycapy-office-ui)
+
 ---
 
 ## Installation
