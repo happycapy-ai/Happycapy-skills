@@ -24,6 +24,7 @@ Launch a 3D-style virtual office to visualize AI assistant working status in rea
 - **Real-time Statistics** - Track time spent in each area (persisted to localStorage)
 - **Demo Mode** - One-click demonstration of all states
 - **Humorous Bubble Text** - Fun inner monologues for each state
+- **Auto Status Hooks** - Automatic status updates based on Claude's tool usage
 
 ## Area Mapping
 
@@ -103,6 +104,23 @@ Capybara Status Areas:
 
 Click the "Demo Mode" button to see the complete workflow demonstration!
 ```
+
+## Auto Status Hooks (Optional)
+
+Enable automatic status updates based on Claude's tool usage:
+
+```bash
+./install_hooks.sh
+```
+
+Tool -> Status mapping:
+| Tool | Status | Area |
+|------|--------|------|
+| Read | reading | Library |
+| Grep/Glob | searching | Library |
+| Write/Edit | writing/editing | Desk |
+| Bash | executing | Server Room |
+| Task | thinking | Library |
 
 ## Shutdown Office
 
