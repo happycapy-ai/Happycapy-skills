@@ -165,6 +165,11 @@ Get current weather and forecasts using free services without requiring API keys
 
 **Original Source:** [openclaw/openclaw](https://github.com/openclaw/openclaw/tree/main/skills/weather)
 
+#### [seek-and-analyze-video](./skills/seek-and-analyze-video/)
+Search, import, and analyze video content from TikTok, YouTube, and Instagram with persistent AI memory.
+
+**Original Source:** https://github.com/kennyzheng-builds/seek-and-analyze-video
+
 ---
 
 ## Installation
