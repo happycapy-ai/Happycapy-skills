@@ -165,6 +165,11 @@ AI-powered film creation assistant that transforms a single sentence or image in
 
 **Original Source:** [Y1fe1-Yang/film-creator-skill](https://github.com/Y1fe1-Yang/film-creator-skill)
 
+#### [happycapy-feishu](./skills/happycapy-feishu/)
+Connect Claude to Feishu (Lark) via MCP — send messages, read/write docs, manage Bitable, all in one conversation. Includes fully automated OAuth setup with PKCE flow; users only need to provide App ID/Secret and click one auth link. / 让 Claude 直接操作飞书——发消息、写文档、管理多维表格，一句话搞定。
+
+**Original Source:** [Y1fe1-Yang/happycapy-feishu](https://github.com/Y1fe1-Yang/happycapy-feishu)
+
 #### [weather](./skills/weather/)
 Get current weather and forecasts using free services without requiring API keys. Uses wttr.in for rich terminal weather displays and Open-Meteo for JSON API responses.
 
