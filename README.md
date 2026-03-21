@@ -170,6 +170,11 @@ Connect Claude to Feishu (Lark) via MCP — send messages, read/write docs, mana
 
 **Original Source:** [Y1fe1-Yang/happycapy-feishu](https://github.com/Y1fe1-Yang/happycapy-feishu)
 
+#### [happycapy-social-publisher](./skills/happycapy-social-publisher/)
+Publish content to 13+ social media platforms simultaneously (Instagram, Twitter/X, LinkedIn, Threads, Facebook, TikTok, YouTube, Pinterest, Reddit, Telegram, Discord, and more) with platform-optimized styles, optional AI-generated media, and smart error handling. Uses Late MCP integration available in HappyCapy environment.
+
+**Original Source:** [Yv3s-y4ng/happycapy-social-publisher](https://github.com/Yv3s-y4ng/happycapy-social-publisher)
+
 #### [weather](./skills/weather/)
 Get current weather and forecasts using free services without requiring API keys. Uses wttr.in for rich terminal weather displays and Open-Meteo for JSON API responses.
 
