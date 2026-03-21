@@ -1,0 +1,21 @@
+# Database (user-specific, contains learned rules)
+cortex.db
+cortex.db-wal
+cortex.db-shm
+*.db.backup-*
+
+# Trained models (regenerated from rules)
+tfidf/vectorizer.pkl
+embeddings/*.pkl
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Backups
+backups/
+
+# OS files
+.DS_Store
+Thumbs.db

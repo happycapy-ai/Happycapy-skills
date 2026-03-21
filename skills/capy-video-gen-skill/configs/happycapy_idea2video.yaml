@@ -1,0 +1,29 @@
+# ViMax configuration for HappyCapy AI Gateway
+# All API calls route through the HappyCapy gateway.
+
+chat_model:
+  init_args:
+    model: gpt-4o
+    model_provider: openai
+    api_key: ${AI_GATEWAY_API_KEY}
+    base_url: https://ai-gateway.happycapy.ai/api/v1/openai/v1
+  max_requests_per_minute: 100
+  max_requests_per_day: 2000
+
+image_generator:
+  class_path: tools.ImageGeneratorHappyCapyAPI
+  init_args:
+    api_key: ${AI_GATEWAY_API_KEY}
+    model: google/gemini-3.1-flash-image-preview
+  max_requests_per_minute: 10
+  max_requests_per_day: 500
+
+video_generator:
+  class_path: tools.VideoGeneratorHappyCapyAPI
+  init_args:
+    api_key: ${AI_GATEWAY_API_KEY}
+    model: google/veo-3.1-generate-preview
+  max_requests_per_minute: 2
+  max_requests_per_day: 50
+
+working_dir: .working_dir/idea2video

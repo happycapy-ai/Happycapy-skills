@@ -1,0 +1,33 @@
+# Workspace - runtime files
+workspace/repos/
+workspace/*.json
+workspace/agent-*/
+
+# Logs
+logs/*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Secrets (never commit)
+.env
+*.pem
+*.key
+credentials.json
+
+# Node (if any tooling added)
+node_modules/
+package-lock.json
+
+# Python (if any tooling added)
+__pycache__/
+*.pyc
+.venv/
+venv/

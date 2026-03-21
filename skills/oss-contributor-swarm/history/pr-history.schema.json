@@ -1,0 +1,508 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/oss-contributor-swarm/pr-history.schema.json",
+  "title": "PR History Database Schema",
+  "description": "Schema for validating PR history tracking database",
+  "type": "object",
+  "required": ["metadata", "prs", "statistics", "repositories", "domains"],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": ["version", "schema_version", "last_updated"],
+      "properties": {
+        "version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$",
+          "description": "Semantic version of the database"
+        },
+        "schema_version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+$",
+          "description": "Schema version for migrations"
+        },
+        "last_updated": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO8601 timestamp of last update"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "description": {
+          "type": "string"
+        },
+        "backup_enabled": {
+          "type": "boolean"
+        },
+        "backup_frequency": {
+          "type": "string",
+          "enum": ["on_write", "hourly", "daily"]
+        }
+      }
+    },
+    "prs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/pr_record"
+      }
+    },
+    "statistics": {
+      "$ref": "#/definitions/statistics"
+    },
+    "repositories": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/repository_summary"
+      }
+    },
+    "domains": {
+      "type": "object",
+      "properties": {
+        "ROS2": { "$ref": "#/definitions/domain_stats" },
+        "AI_ML": { "$ref": "#/definitions/domain_stats" },
+        "Web": { "$ref": "#/definitions/domain_stats" },
+        "CLI": { "$ref": "#/definitions/domain_stats" },
+        "Other": { "$ref": "#/definitions/domain_stats" }
+      },
+      "additionalProperties": { "$ref": "#/definitions/domain_stats" }
+    },
+    "_schema": {
+      "type": "object",
+      "description": "Internal schema reference for validation"
+    }
+  },
+  "definitions": {
+    "pr_record": {
+      "type": "object",
+      "required": ["id", "repository", "pr", "contribution"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+          "description": "UUID v4 identifier"
+        },
+        "repository": {
+          "$ref": "#/definitions/repository"
+        },
+        "issue": {
+          "$ref": "#/definitions/issue"
+        },
+        "pr": {
+          "$ref": "#/definitions/pr"
+        },
+        "contribution": {
+          "$ref": "#/definitions/contribution"
+        },
+        "review": {
+          "$ref": "#/definitions/review"
+        },
+        "timeline": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/timeline_event"
+          }
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "agent_metadata": {
+          "$ref": "#/definitions/agent_metadata"
+        },
+        "_internal": {
+          "type": "object",
+          "properties": {
+            "created_by": { "type": "string" },
+            "created_at": { "type": "string", "format": "date-time" },
+            "last_modified_by": { "type": "string" },
+            "last_modified_at": { "type": "string", "format": "date-time" }
+          }
+        }
+      }
+    },
+    "repository": {
+      "type": "object",
+      "required": ["owner", "name", "url"],
+      "properties": {
+        "owner": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "full_name": {
+          "type": "string",
+          "pattern": "^[^/]+/[^/]+$"
+        },
+        "stars": {
+          "type": ["integer", "null"],
+          "minimum": 0
+        },
+        "language": {
+          "type": "string"
+        },
+        "topics": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "issue": {
+      "type": "object",
+      "required": ["number", "title", "url"],
+      "properties": {
+        "number": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "labels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "body_summary": {
+          "type": "string"
+        }
+      }
+    },
+    "pr": {
+      "type": "object",
+      "required": ["number", "title", "url", "status", "created_at"],
+      "properties": {
+        "number": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "branch": {
+          "type": "string"
+        },
+        "base_branch": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["open", "merged", "closed", "rejected"]
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        },
+        "merged_at": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        },
+        "closed_at": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        },
+        "draft": {
+          "type": "boolean"
+        },
+        "mergeable": {
+          "type": ["boolean", "null"]
+        },
+        "check_status": {
+          "type": "string",
+          "enum": ["pending", "success", "failure", "neutral", "cancelled", "timed_out", "action_required"]
+        }
+      }
+    },
+    "contribution": {
+      "type": "object",
+      "required": ["type", "domain", "value_score", "lines_added", "lines_removed"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["bugfix", "feature", "docs", "test", "refactor", "typo"]
+        },
+        "domain": {
+          "type": "string",
+          "enum": ["ROS2", "AI_ML", "Web", "CLI", "Other"]
+        },
+        "value_score": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "lines_added": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "lines_removed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "files_changed": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "complexity": {
+          "type": "string",
+          "enum": ["trivial", "low", "medium", "high", "critical"]
+        },
+        "breaking_change": {
+          "type": "boolean"
+        }
+      }
+    },
+    "review": {
+      "type": "object",
+      "properties": {
+        "comments_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "approvals_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "changes_requested": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "feedback_summary": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "reviewers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "review_state": {
+          "type": "string",
+          "enum": ["pending", "approved", "changes_requested", "commented"]
+        }
+      }
+    },
+    "timeline_event": {
+      "type": "object",
+      "required": ["event", "timestamp"],
+      "properties": {
+        "event": {
+          "type": "string"
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "description": {
+          "type": "string"
+        },
+        "actor": {
+          "type": "string"
+        }
+      }
+    },
+    "agent_metadata": {
+      "type": "object",
+      "properties": {
+        "swarm_run_id": {
+          "type": "string"
+        },
+        "agents_involved": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "execution_time_seconds": {
+          "type": "number",
+          "minimum": 0
+        },
+        "automated": {
+          "type": "boolean"
+        }
+      }
+    },
+    "statistics": {
+      "type": "object",
+      "required": ["total_prs", "merged_prs", "open_prs", "closed_prs", "merge_rate", "repos_contributed"],
+      "properties": {
+        "total_prs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "merged_prs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "open_prs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "closed_prs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "rejected_prs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "merge_rate": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "repos_contributed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unique_repos": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "domains": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "contribution_types": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "total_lines_added": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "total_lines_removed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "total_files_changed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "avg_value_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "avg_review_comments": {
+          "type": "number",
+          "minimum": 0
+        },
+        "avg_time_to_merge_hours": {
+          "type": ["number", "null"],
+          "minimum": 0
+        },
+        "last_calculated": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "repository_summary": {
+      "type": "object",
+      "required": ["full_name", "owner", "name", "url", "pr_count"],
+      "properties": {
+        "full_name": {
+          "type": "string",
+          "pattern": "^[^/]+/[^/]+$"
+        },
+        "owner": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "pr_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "merged_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "first_contribution": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "last_contribution": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "domain": {
+          "type": "string"
+        }
+      }
+    },
+    "domain_stats": {
+      "type": "object",
+      "required": ["count", "repositories"],
+      "properties": {
+        "count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "repositories": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "merged": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "open": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "avg_value_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        }
+      }
+    }
+  }
+}

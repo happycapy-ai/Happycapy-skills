@@ -175,6 +175,51 @@ Get current weather and forecasts using free services without requiring API keys
 
 **Original Source:** [openclaw/openclaw](https://github.com/openclaw/openclaw/tree/main/skills/weather)
 
+#### [capy-cortex](./skills/capy-cortex/)
+Autonomous learning system that learns from mistakes, reflects on sessions, and gets smarter over time. Powered by SQLite + FTS5 + sklearn TF-IDF with persistent knowledge loaded via hooks.
+
+**Original Source:** [ndpvt-web/capy-cortex](https://github.com/ndpvt-web/capy-cortex)
+
+#### [latex-document](./skills/latex-document/)
+Universal LaTeX document skill: create, compile, and convert any document to professional PDF with PNG previews. Supports resumes, reports, cover letters, invoices, academic papers, theses, presentations (Beamer), scientific posters, formal letters, exams, books, cheat sheets, fillable PDF forms, mail merge, and version diffing.
+
+**Original Source:** [ndpvt-web/latex-document-skill](https://github.com/ndpvt-web/latex-document-skill)
+
+#### [world-class-carousel](./skills/world-class-carousel/)
+Generate world-class Instagram carousel content on any topic. Produces 7-10 publication-ready slides (1080x1350) with AI-generated visuals, precise typography, Instagram music recommendations, optimized captions, and hashtags. Uses Aristotelian first-principles framework with 7 content archetypes, 6 hook patterns, and a comprehensive design system.
+
+**Original Source:** [ndpvt-web/world-class-carousel](https://github.com/ndpvt-web/world-class-carousel)
+
+#### [prompt-improver](./skills/prompt-improver/)
+Optimize prompts for better AI responses. Transforms vague requests into clear, specific, actionable prompts. Use when asked to improve, refine, or review a prompt.
+
+**Original Source:** [ndpvt-web/prompt-improver](https://github.com/ndpvt-web/prompt-improver)
+
+#### [reddit-post-skill](./skills/reddit-post-skill/)
+Master authentic Reddit content generator using emotion-first, phased architecture. Creates posts that sound genuinely human through cognitive state simulation. Includes adversarial committee review, Claude-ism detection, and interactive refinement workflow.
+
+**Original Source:** [niveshdandyan/reddit-post-skill](https://github.com/niveshdandyan/reddit-post-skill)
+
+#### [llm-council](./skills/llm-council/)
+Multi-model LLM Council with live dashboard. Query multiple AI models simultaneously, see responses side-by-side in a swarm-style dashboard, synthesize consensus, and run anonymous model-to-model voting. Supports Claude, GPT, and Gemini models via AI Gateway.
+
+**Original Source:** [niveshdandyan/llm-council](https://github.com/niveshdandyan/llm-council)
+
+#### [oss-contributor-swarm](./skills/oss-contributor-swarm/)
+Autonomous 9-agent swarm that continuously contributes to open source projects on GitHub. Finds good-first-issues, analyzes requirements, writes code/tests/docs, creates PRs, and responds to reviews - all automatically with learning.
+
+**Original Source:** [niveshdandyan/oss-contributor-swarm](https://github.com/niveshdandyan/oss-contributor-swarm)
+
+#### [contract-first-agents](./skills/contract-first-agents/)
+Contract-First Map-Reduce coordination protocol for native TeamCreate multi-agent teams. Wraps TeamCreate, Task (teammates), SendMessage with an upfront shared contract phase that eliminates 75% of integration errors. Based on 400+ experiment research proving 52.5% quality improvement over naive coordination.
+
+**Original Source:** [ndpvt-web/contract-first-agents](https://github.com/ndpvt-web/contract-first-agents)
+
+#### [capy-video-gen-skill](./skills/capy-video-gen-skill/)
+Multi-shot AI video generation pipeline with face identity consistency. Converts scripts or ideas into complete videos using character extraction, storyboarding, frame generation, and video assembly. 300 experiments validated, 70% face distance improvement.
+
+**Original Source:** [ndpvt-web/capy-video-gen-skill](https://github.com/ndpvt-web/capy-video-gen-skill)
+
 ---
 
 ## Installation

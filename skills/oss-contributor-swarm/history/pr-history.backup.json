@@ -1,0 +1,198 @@
+{
+  "pr_history": [
+    {
+      "id": "e9b9e5fe-f9e8-42c1-95e5-99b826ddda47",
+      "repository": {
+        "owner": "eclipse-iceoryx",
+        "name": "iceoryx",
+        "url": "https://github.com/eclipse-iceoryx/iceoryx",
+        "stars": 0
+      },
+      "issue": {
+        "number": 1051,
+        "title": "Move publish subscribe port related type definitions to separate header",
+        "url": "https://github.com/eclipse-iceoryx/iceoryx/issues/1051",
+        "labels": []
+      },
+      "pr": {
+        "number": 2509,
+        "title": "iox-#1051 Move publish subscribe port type definitions to pub_sub_port_types.hpp",
+        "url": "https://github.com/eclipse-iceoryx/iceoryx/pull/2509",
+        "branch": "iox-1051-pub-sub-port-types",
+        "status": "open",
+        "created_at": "2026-02-03T16:10:00Z",
+        "merged_at": null,
+        "closed_at": null
+      },
+      "contribution": {
+        "type": "refactor",
+        "domain": "ROS2",
+        "value_score": 68,
+        "lines_added": 32,
+        "lines_removed": 14,
+        "files_changed": [
+          "pub_sub_port_types.hpp",
+          "publisher_port_data.hpp",
+          "subscriber_port_data.hpp"
+        ]
+      },
+      "review": {
+        "comments_count": 0,
+        "approvals_count": 0,
+        "changes_requested": 0,
+        "feedback_summary": []
+      },
+      "agent_metadata": {
+        "swarm_run_id": "",
+        "agents_involved": [],
+        "execution_time_seconds": 0
+      }
+    },
+    {
+      "id": "c4ce6d44-082d-4b7c-a37c-2b0e1d949022",
+      "repository": {
+        "owner": "ros2",
+        "name": "rclcpp",
+        "url": "",
+        "stars": 0
+      },
+      "issue": {
+        "number": 0,
+        "title": "",
+        "url": "",
+        "labels": []
+      },
+      "pr": {
+        "number": 123,
+        "title": "Fix memory issue",
+        "url": "",
+        "branch": "",
+        "status": "open",
+        "created_at": "2026-02-03T15:34:42Z",
+        "merged_at": null,
+        "closed_at": null
+      },
+      "contribution": {
+        "type": "feature",
+        "domain": "Other",
+        "value_score": 50,
+        "lines_added": 0,
+        "lines_removed": 0,
+        "files_changed": []
+      },
+      "review": {
+        "comments_count": 0,
+        "approvals_count": 0,
+        "changes_requested": 0,
+        "feedback_summary": []
+      },
+      "agent_metadata": {
+        "swarm_run_id": "",
+        "agents_involved": [],
+        "execution_time_seconds": 0
+      }
+    },
+    {
+      "id": "e95150ff-ce64-41fa-acb6-f33de0bfc37c",
+      "repository": {
+        "owner": "eclipse-iceoryx",
+        "name": "iceoryx",
+        "url": "https://github.com/eclipse-iceoryx/iceoryx",
+        "stars": 1500
+      },
+      "issue": {
+        "number": 0,
+        "title": "",
+        "url": "",
+        "labels": []
+      },
+      "pr": {
+        "number": 2509,
+        "title": "Fix memory leak in subscriber",
+        "url": "https://github.com/eclipse-iceoryx/iceoryx/pull/2509",
+        "branch": "",
+        "status": "open",
+        "created_at": "2026-02-03T15:34:54Z",
+        "merged_at": null,
+        "closed_at": null
+      },
+      "contribution": {
+        "type": "bugfix",
+        "domain": "ROS2",
+        "value_score": 68,
+        "lines_added": 0,
+        "lines_removed": 0,
+        "files_changed": []
+      },
+      "review": {
+        "comments_count": 0,
+        "approvals_count": 0,
+        "changes_requested": 0,
+        "feedback_summary": []
+      },
+      "agent_metadata": {
+        "swarm_run_id": "",
+        "agents_involved": [],
+        "execution_time_seconds": 0
+      }
+    },
+    {
+      "id": "c218fcc5-00d3-4089-a3d6-93c2448b2f88",
+      "repository": {
+        "owner": "maplibre",
+        "name": "maplibre-gl-js",
+        "url": "",
+        "stars": 5000
+      },
+      "issue": {
+        "number": 0,
+        "title": "",
+        "url": "",
+        "labels": []
+      },
+      "pr": {
+        "number": 7052,
+        "title": "Improve rendering performance",
+        "url": "",
+        "branch": "",
+        "status": "merged",
+        "created_at": "2026-02-03T15:35:00Z",
+        "merged_at": null,
+        "closed_at": null
+      },
+      "contribution": {
+        "type": "feature",
+        "domain": "Web",
+        "value_score": 75,
+        "lines_added": 0,
+        "lines_removed": 0,
+        "files_changed": []
+      },
+      "review": {
+        "comments_count": 0,
+        "approvals_count": 0,
+        "changes_requested": 0,
+        "feedback_summary": []
+      },
+      "agent_metadata": {
+        "swarm_run_id": "",
+        "agents_involved": [],
+        "execution_time_seconds": 0
+      }
+    }
+  ],
+  "statistics": {
+    "total_prs": 4,
+    "merged_prs": 1,
+    "open_prs": 3,
+    "closed_prs": 0,
+    "merge_rate": 25,
+    "repos_contributed": 3,
+    "domains": {
+      "Other": 1,
+      "ROS2": 2,
+      "Web": 1
+    },
+    "avg_value_score": 65.2
+  }
+}

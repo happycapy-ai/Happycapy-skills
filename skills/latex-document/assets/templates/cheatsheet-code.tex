@@ -1,0 +1,687 @@
+% ============================================================================
+% ULTRA-COMPACT CODE REFERENCE CARD TEMPLATE
+% ============================================================================
+% 4-column landscape, ultra-tight spacing, maximum information density
+% Paper: Letter landscape | Columns: 4 (65mm each) | Base font: 7pt
+% Strategy: Minimal boxes, section rules, inline code, tables for APIs
+% Compile: pdflatex (auto-detected by compile script)
+% ============================================================================
+
+\documentclass[7pt,landscape]{extarticle}
+
+% --- GEOMETRY ---
+\usepackage[landscape,margin=3mm,top=4mm,bottom=3mm]{geometry}
+
+% --- ENCODING & FONTS ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+
+% --- LAYOUT ---
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{titlesec}
+
+% --- VISUAL ---
+\usepackage[table]{xcolor}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\usepackage{tabularx}
+\usepackage{array}
+
+% --- MATH (light, for Big-O etc.) ---
+\usepackage{amsmath}
+
+% ============================================================================
+% COLOR SCHEME — Minimal, professional
+% ============================================================================
+\definecolor{cdPrimary}{RGB}{0,100,180}         % Headers
+\definecolor{cdGray}{RGB}{120,120,120}           % Secondary
+\definecolor{cdLightBg}{RGB}{245,247,249}        % Rare highlights
+\definecolor{cdBorder}{RGB}{200,200,200}         % Subtle
+
+% ============================================================================
+% GLOBAL SPACING — Ultra-tight
+% ============================================================================
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\columnsep}{2mm}
+\setlength{\columnseprule}{0.1pt}
+\def\columnseprulecolor{\color{cdBorder}}
+\setlength{\premulticols}{0pt}
+\setlength{\postmulticols}{0pt}
+\setlength{\multicolsep}{0pt}
+
+% --- Ultra-compact lists ---
+\setlist{nosep, leftmargin=*, topsep=0pt, partopsep=0pt, parsep=0pt, itemsep=0pt}
+\setlist[itemize]{leftmargin=2mm, label={\textcolor{cdPrimary}{\tiny\textbullet}}}
+
+% --- Tight line spacing ---
+\linespread{0.88}
+
+% ============================================================================
+% SECTION FORMATTING — Rules instead of boxes
+% ============================================================================
+\titleformat{\section}
+  {\bfseries\fontsize{7pt}{8pt}\selectfont\color{cdPrimary}}
+  {}{0pt}{}[\vspace{-2pt}{\color{cdPrimary}\titlerule[0.4pt]}\vspace{0.5pt}]
+
+\titleformat{\subsection}
+  {\bfseries\fontsize{6pt}{7pt}\selectfont}
+  {}{0pt}{}
+
+\titlespacing{\section}{0pt}{1.5pt plus 1pt}{0.5pt}
+\titlespacing{\subsection}{0pt}{1pt}{0pt}
+
+% ============================================================================
+% MINIMAL SPECIAL ENVIRONMENTS
+% ============================================================================
+
+% --- Only for critical syntax patterns ---
+\newtcolorbox{syntaxbox}{
+    enhanced, frame hidden,
+    colback=cdLightBg,
+    top=0.2mm, bottom=0.2mm, left=0.5mm, right=0.5mm,
+    before skip=0.5mm, after skip=0.2mm
+}
+
+% ============================================================================
+% DOCUMENT
+% ============================================================================
+\begin{document}
+
+% --- TITLE BAR ---
+\noindent\colorbox{black}{%
+    \parbox{\dimexpr\textwidth-2\fboxsep\relax}{%
+        \centering\color{white}%
+        \fontsize{9pt}{10pt}\selectfont\textbf{PYTHON 3 QUICK REFERENCE}%
+        \hfill%
+        \fontsize{6pt}{7pt}\selectfont v3.12+ \textbar{} Ultra-Compact Edition%
+    }%
+}
+
+\vspace{0.3mm}
+
+% ============================================================================
+% SINGLE multicols* for ENTIRE document - content flows sequentially:
+% p1c1 -> p1c2 -> p1c3 -> p1c4 -> p2c1 -> p2c2 -> p2c3 -> p2c4
+% ============================================================================
+\begin{multicols*}{4}
+\sloppy  % Prevents overfull hboxes in narrow columns
+
+\section*{Data Types \& Literals}
+
+{\fontsize{5.5pt}{6.5pt}\selectfont
+\renewcommand{\arraystretch}{0.88}
+\begin{tabular}{@{}ll@{}}
+\texttt{int} & \texttt{42, 0xff, 0b1010} \\
+\texttt{float} & \texttt{3.14, 1e-3, inf} \\
+\texttt{str} & \texttt{'text', "text"} \\
+\texttt{bool} & \texttt{True, False} \\
+\texttt{None} & null value \\
+\texttt{list} & \texttt{[1,2,3]} mutable \\
+\texttt{tuple} & \texttt{(1,2,3)} immutable \\
+\texttt{dict} & \texttt{\{'a':1\}} key-val \\
+\texttt{set} & \texttt{\{1,2,3\}} unique \\
+\end{tabular}
+}
+
+\section*{String Methods}
+
+\texttt{s.split(sep)} -- split into list \\
+\texttt{s.join(iter)} -- join with separator \\
+\texttt{s.strip()} -- remove whitespace \\
+\texttt{s.replace(a,b)} -- replace all \\
+\texttt{s.find(sub)} -- index or -1 \\
+\texttt{s.startswith(x)} -- prefix check \\
+\texttt{s.endswith(x)} -- suffix check \\
+\texttt{s.upper()/lower()} -- case \\
+\texttt{s.isdigit()} -- numeric check \\
+
+\subsection*{f-strings}
+\texttt{f"\{x:.2f\}"} -- 2 decimals \\
+\texttt{f"\{x:>10\}"} -- right-align \\
+\texttt{f"\{x:\#06x\}"} -- hex format \\
+\texttt{f"\{n:,\}"} -- thousands sep
+
+\section*{List Operations}
+
+\texttt{lst.append(x)} -- add to end \\
+\texttt{lst.extend(iter)} -- add multiple \\
+\texttt{lst.insert(i,x)} -- insert at i \\
+\texttt{lst.pop(i)} -- remove at i \\
+\texttt{lst.remove(x)} -- remove first x \\
+\texttt{lst.sort()} -- in-place sort \\
+\texttt{sorted(lst)} -- new sorted list \\
+\texttt{lst.reverse()} -- reverse \\
+\texttt{lst.index(x)} -- find position \\
+\texttt{lst.count(x)} -- count occur
+
+\subsection*{Slicing}
+\texttt{a[1:5]} -- indices 1 to 4 \\
+\texttt{a[::2]} -- every 2nd element \\
+\texttt{a[::-1]} -- reversed copy \\
+\texttt{a[-1]} -- last element
+
+\section*{Dict Operations}
+
+\texttt{d.get(k,default)} -- safe lookup \\
+\texttt{d.keys()} -- all keys \\
+\texttt{d.values()} -- all values \\
+\texttt{d.items()} -- (k,v) pairs \\
+\texttt{d.update(d2)} -- merge dicts \\
+\texttt{d.pop(k)} -- remove key \\
+\texttt{d.setdefault(k,v)} -- get/set \\
+\texttt{d1 | d2} -- merge (3.9+) \\
+\texttt{k in d} -- membership test
+
+\section*{Set Operations}
+
+\texttt{s.add(x)} -- add element \\
+\texttt{s.remove(x)} -- remove (error) \\
+\texttt{s.discard(x)} -- remove (safe) \\
+\texttt{s1 \& s2} -- intersection \\
+\texttt{s1 | s2} -- union \\
+\texttt{s1 - s2} -- difference \\
+\texttt{s1 \^{} s2} -- symmetric diff
+
+\section*{Comprehensions}
+
+\texttt{[x**2 for x in r]} -- list \\
+\texttt{\{x**2 for x in r\}} -- set \\
+\texttt{\{k:v for k,v in it\}} -- dict \\
+\texttt{(x**2 for x in r)} -- generator
+
+\subsection*{Filtering}
+\texttt{[x for x in r if x>0]} \\
+\texttt{[f(x) if c else g(x) for x in r]}
+
+\section*{Control Flow}
+
+\begin{syntaxbox}
+{\fontsize{5.5pt}{6.5pt}\selectfont\ttfamily
+if x > 0: \\
+\hspace{4mm}action() \\
+elif x == 0: \\
+\hspace{4mm}other() \\
+else: \\
+\hspace{4mm}default()
+}
+\end{syntaxbox}
+
+\textbf{Ternary:} \texttt{y = a if cond else b}
+
+\subsection*{match (3.10+)}
+{\fontsize{5.5pt}{6.5pt}\selectfont\ttfamily
+match cmd: \\
+\hspace{4mm}case "quit": exit() \\
+\hspace{4mm}case "help": show() \\
+\hspace{4mm}case \_: unknown()
+}
+
+\section*{Loops}
+
+\begin{syntaxbox}
+{\fontsize{5.5pt}{6.5pt}\selectfont\ttfamily
+for x in iterable: \\
+\hspace{4mm}if skip: continue \\
+\hspace{4mm}if done: break \\
+else: \\
+\hspace{4mm}no\_break\_clause()
+}
+\end{syntaxbox}
+
+\texttt{while cond: ...} \\
+\texttt{for i,v in enumerate(lst): ...} \\
+\texttt{for a,b in zip(l1,l2): ...} \\
+\texttt{for i in range(n): ...} \\
+\texttt{for i in range(a,b,step): ...}
+
+\section*{Functions}
+
+\begin{syntaxbox}
+{\fontsize{5.5pt}{6.5pt}\selectfont\ttfamily
+def func(x, y=10, *args, **kw): \\
+\hspace{4mm}return x + y
+}
+\end{syntaxbox}
+
+\texttt{lambda x: x**2} -- anonymous \\
+\texttt{@decorator} -- apply decorator
+
+\subsection*{Type Hints}
+{\fontsize{5.5pt}{6.5pt}\selectfont\ttfamily
+def add(a: int, b: int) -> int: \\
+\hspace{4mm}return a + b
+}
+
+\section*{Built-in Functions}
+
+{\fontsize{5.5pt}{6.5pt}\selectfont
+\renewcommand{\arraystretch}{0.88}
+\begin{tabular}{@{}ll@{}}
+\texttt{len(x)} & length \\
+\texttt{type(x)} & type object \\
+\texttt{str(x)} & to string \\
+\texttt{int(x)} & to integer \\
+\texttt{float(x)} & to float \\
+\texttt{list(x)} & to list \\
+\texttt{sum(iter)} & sum values \\
+\texttt{max(iter)} & maximum \\
+\texttt{min(iter)} & minimum \\
+\texttt{abs(x)} & absolute val \\
+\texttt{round(x,n)} & round n digits \\
+\texttt{sorted(iter)} & new sorted \\
+\texttt{reversed(iter)} & reverse iter \\
+\texttt{enumerate(it)} & (i,val) pairs \\
+\texttt{zip(*iters)} & parallel iter \\
+\texttt{map(f,iter)} & apply f \\
+\texttt{filter(f,it)} & keep if true \\
+\texttt{any(iter)} & any true \\
+\texttt{all(iter)} & all true \\
+\texttt{isinstance(x,T)} & type check \\
+\texttt{hasattr(o,a)} & attr exists \\
+\texttt{getattr(o,a)} & get attr \\
+\texttt{setattr(o,a,v)} & set attr \\
+\end{tabular}
+}
+
+\section*{File I/O}
+
+\begin{syntaxbox}
+{\fontsize{5.5pt}{6.5pt}\selectfont\ttfamily
+with open('f.txt') as f: \\
+\hspace{4mm}text = f.read() \\
+\hspace{4mm}lines = f.readlines()
+}
+\end{syntaxbox}
+
+\texttt{open('f','w')} -- write mode \\
+\texttt{open('f','a')} -- append mode \\
+\texttt{open('f','rb')} -- binary read
+
+\section*{Error Handling}
+
+\begin{syntaxbox}
+{\fontsize{5.5pt}{6.5pt}\selectfont\ttfamily
+try: \\
+\hspace{4mm}risky() \\
+except ValueError as e: \\
+\hspace{4mm}handle(e) \\
+except (KeyError, IndexError): \\
+\hspace{4mm}multi\_type() \\
+else: \\
+\hspace{4mm}no\_exception() \\
+finally: \\
+\hspace{4mm}always\_runs()
+}
+\end{syntaxbox}
+
+\texttt{raise ValueError("msg")} \\
+\texttt{raise Exception from e} -- chain \\
+\texttt{assert cond, "msg"} -- assertion
+
+\section*{Classes}
+
+\begin{syntaxbox}
+{\fontsize{5.5pt}{6.5pt}\selectfont\ttfamily
+class Dog(Animal): \\
+\hspace{4mm}def \_\_init\_\_(self, name): \\
+\hspace{8mm}super().\_\_init\_\_() \\
+\hspace{8mm}self.name = name \\
+\\
+\hspace{4mm}def speak(self): \\
+\hspace{8mm}return f"\{self.name\} barks"
+}
+\end{syntaxbox}
+
+\texttt{@property} -- getter decorator \\
+\texttt{@classmethod} -- class method \\
+\texttt{@staticmethod} -- static method
+
+\subsection*{Dunder Methods}
+\texttt{\_\_init\_\_} -- constructor \\
+\texttt{\_\_str\_\_} -- string repr \\
+\texttt{\_\_repr\_\_} -- debug repr \\
+\texttt{\_\_len\_\_} -- \texttt{len(obj)} \\
+\texttt{\_\_getitem\_\_} -- \texttt{obj[key]} \\
+\texttt{\_\_setitem\_\_} -- \texttt{obj[k]=v} \\
+\texttt{\_\_iter\_\_} -- \texttt{for x in obj} \\
+\texttt{\_\_eq\_\_} -- \texttt{obj==other} \\
+\texttt{\_\_lt\_\_} -- \texttt{obj<other} \\
+\texttt{\_\_hash\_\_} -- hash value \\
+\texttt{\_\_call\_\_} -- \texttt{obj()} \\
+\texttt{\_\_enter\_\_/\_\_exit\_\_} -- context mgr
+
+\section*{Standard Library: os/pathlib}
+
+\texttt{Path('f').read\_text()} \\
+\texttt{Path('f').write\_text(s)} \\
+\texttt{Path('f').exists()} \\
+\texttt{Path('f').mkdir(parents=True)} \\
+\texttt{Path('f').stem} -- no extension \\
+\texttt{Path('f').suffix} -- extension \\
+\texttt{Path('f').parent} -- directory \\
+\texttt{Path.cwd()} -- current dir \\
+\texttt{Path.home()} -- home dir \\
+\texttt{list(Path('d').glob('*.py'))} \\
+\texttt{os.environ['KEY']} -- env var \\
+\texttt{os.getcwd()} -- working dir
+
+\section*{itertools}
+
+\texttt{chain(*iters)} -- flatten \\
+\texttt{product(a,b)} -- cartesian \\
+\texttt{combinations(a,n)} -- combos \\
+\texttt{permutations(a,n)} -- ordered \\
+\texttt{groupby(iter,key)} -- group \\
+\texttt{islice(iter,n)} -- slice iter \\
+\texttt{cycle(iter)} -- infinite loop \\
+\texttt{repeat(x,n)} -- repeat n times
+
+\section*{collections}
+
+\texttt{Counter(iter)} -- count freq \\
+\texttt{defaultdict(type)} -- defaults \\
+\texttt{OrderedDict()} -- order kept \\
+\texttt{deque()} -- fast ends \\
+\texttt{namedtuple(n,flds)} -- named
+
+\section*{re (Regex)}
+
+\texttt{re.search(p,s)} -- first match \\
+\texttt{re.findall(p,s)} -- all matches \\
+\texttt{re.sub(p,r,s)} -- replace \\
+\texttt{re.split(p,s)} -- split \\
+\texttt{re.compile(p)} -- precompile
+
+\subsection*{Patterns}
+\texttt{\textbackslash d} digit, \texttt{\textbackslash w} word, \texttt{\textbackslash s} space \\
+\texttt{.} any char, \texttt{*} 0+, \texttt{+} 1+, \texttt{?} 0/1 \\
+\texttt{[abc]} set, \texttt{[a-z]} range \\
+\texttt{\^{}} start, \texttt{\$} end \\
+\texttt{()} capture group
+
+\section*{JSON}
+
+{\fontsize{5.5pt}{6.5pt}\selectfont\ttfamily
+import json \\
+data = json.load(open('f.json')) \\
+json.dump(data, open('o.json','w')) \\
+s = json.dumps(obj) \\
+obj = json.loads(s)
+}
+
+\section*{datetime}
+
+{\fontsize{5.5pt}{6.5pt}\selectfont\ttfamily
+from datetime import datetime \\
+now = datetime.now() \\
+dt = datetime(2024,1,15,10,30) \\
+dt.strftime("\%Y-\%m-\%d") \\
+datetime.strptime(s,fmt) \\
+dt.timestamp() -- unix time
+}
+
+\section*{asyncio}
+
+\begin{syntaxbox}
+{\fontsize{5.5pt}{6.5pt}\selectfont\ttfamily
+async def fetch(url): \\
+\hspace{4mm}await asyncio.sleep(1) \\
+\hspace{4mm}return data \\
+\\
+async def main(): \\
+\hspace{4mm}results = await asyncio.gather( \\
+\hspace{8mm}fetch(u1), fetch(u2)) \\
+\\
+asyncio.run(main())
+}
+\end{syntaxbox}
+
+% Content continues flowing to page 2 automatically
+
+\section*{Threading \& Multiprocessing}
+
+\begin{syntaxbox}
+{\fontsize{5.5pt}{6.5pt}\selectfont\ttfamily
+from concurrent.futures import \\
+\hspace{4mm}ThreadPoolExecutor \\
+\\
+with ThreadPoolExecutor(4) as ex: \\
+\hspace{4mm}results = ex.map(fn, data) \\
+\hspace{4mm}futures = [ex.submit(fn,x) \\
+\hspace{12mm}for x in items]
+}
+\end{syntaxbox}
+
+\texttt{ProcessPoolExecutor} -- CPU-bound \\
+\texttt{ThreadPoolExecutor} -- I/O-bound
+
+\section*{Decorators}
+
+\begin{syntaxbox}
+{\fontsize{5.5pt}{6.5pt}\selectfont\ttfamily
+def timer(func): \\
+\hspace{4mm}def wrapper(*args, **kw): \\
+\hspace{8mm}t0 = time.time() \\
+\hspace{8mm}result = func(*args, **kw) \\
+\hspace{8mm}print(f"\{time.time()-t0\}s") \\
+\hspace{8mm}return result \\
+\hspace{4mm}return wrapper \\
+\\
+@timer \\
+def slow(): ...
+}
+\end{syntaxbox}
+
+\subsection*{functools}
+\texttt{@lru\_cache(maxsize=128)} -- cache \\
+\texttt{@wraps(func)} -- preserve meta \\
+\texttt{partial(fn, a=1)} -- partial app
+
+\section*{Generators}
+
+\begin{syntaxbox}
+{\fontsize{5.5pt}{6.5pt}\selectfont\ttfamily
+def gen(n): \\
+\hspace{4mm}for i in range(n): \\
+\hspace{8mm}yield i**2 \\
+\\
+g = gen(10) \\
+next(g) -- get next value
+}
+\end{syntaxbox}
+
+\texttt{(x**2 for x in r)} -- generator exp \\
+\texttt{yield from iter} -- delegate \\
+Memory-efficient for large sequences
+
+\section*{Arguments \& Unpacking}
+
+\texttt{*args} -- variable positional \\
+\texttt{**kwargs} -- variable keyword \\
+\texttt{def f(a, *, b)} -- keyword-only \\
+\texttt{def f(a, /, b)} -- pos-only (3.8+)
+
+\subsection*{Unpacking}
+\texttt{a, b = (1, 2)} \\
+\texttt{a, *rest = [1,2,3,4]} \\
+\texttt{first, *mid, last = lst} \\
+\texttt{d = \{**d1, **d2\}} -- merge dicts \\
+\texttt{lst = [*a, *b]} -- concat lists
+
+\section*{Lambda \& Higher Order}
+
+\texttt{map(lambda x: x**2, lst)} \\
+\texttt{filter(lambda x: x>0, lst)} \\
+\texttt{sorted(lst, key=lambda x: x[1])} \\
+\texttt{max(lst, key=lambda x: x.val)}
+
+\subsection*{operator module}
+{\fontsize{5.5pt}{6.5pt}\selectfont\ttfamily
+from operator import itemgetter \\
+sorted(data, key=itemgetter(1))
+}
+
+\section*{Iterators \& Iterables}
+
+\texttt{iter(obj)} -- get iterator \\
+\texttt{next(it)} -- get next \\
+\texttt{next(it, default)} -- with default
+
+\begin{syntaxbox}
+{\fontsize{5.5pt}{6.5pt}\selectfont\ttfamily
+class Counter: \\
+\hspace{4mm}def \_\_iter\_\_(self): \\
+\hspace{8mm}self.n = 0 \\
+\hspace{8mm}return self \\
+\hspace{4mm}def \_\_next\_\_(self): \\
+\hspace{8mm}if self.n > 10: \\
+\hspace{12mm}raise StopIteration \\
+\hspace{8mm}self.n += 1 \\
+\hspace{8mm}return self.n
+}
+\end{syntaxbox}
+
+\section*{Testing (pytest)}
+
+\begin{syntaxbox}
+{\fontsize{5.5pt}{6.5pt}\selectfont\ttfamily
+def test\_add(): \\
+\hspace{4mm}assert add(1,2) == 3 \\
+\\
+@pytest.fixture \\
+def db(): \\
+\hspace{4mm}return setup\_db()
+}
+\end{syntaxbox}
+
+\texttt{pytest -v} verbose \\
+\texttt{pytest -k "name"} filter \\
+\texttt{pytest --cov} coverage
+
+\section*{Logging}
+
+{\fontsize{5.5pt}{6.5pt}\selectfont\ttfamily
+import logging \\
+logging.basicConfig(level=logging.INFO) \\
+logger = logging.getLogger(\_\_name\_\_) \\
+logger.info/warning/error/debug("msg")
+}
+
+\section*{argparse}
+
+\begin{syntaxbox}
+{\fontsize{5.5pt}{6.5pt}\selectfont\ttfamily
+import argparse \\
+p = argparse.ArgumentParser() \\
+p.add\_argument('file') \\
+p.add\_argument('-v', '--verbose', \\
+\hspace{4mm}action='store\_true') \\
+args = p.parse\_args()
+}
+\end{syntaxbox}
+
+\section*{sys \& subprocess}
+
+\texttt{sys.argv} -- CLI arguments \\
+\texttt{sys.exit(code)} -- exit \\
+\texttt{sys.path} -- module path
+
+\begin{syntaxbox}
+{\fontsize{5.5pt}{6.5pt}\selectfont\ttfamily
+import subprocess \\
+result = subprocess.run( \\
+\hspace{4mm}['cmd', 'arg'], \\
+\hspace{4mm}capture\_output=True)
+}
+\end{syntaxbox}
+
+\section*{random}
+
+\texttt{random.random()} -- [0,1) \\
+\texttt{random.randint(a,b)} -- int \\
+\texttt{random.choice(seq)} -- pick \\
+\texttt{random.shuffle(lst)} -- in-place
+
+\section*{math}
+
+{\fontsize{5.5pt}{6.5pt}\selectfont
+\renewcommand{\arraystretch}{0.88}
+\begin{tabular}{@{}ll@{}}
+\texttt{math.ceil(x)} & round up \\
+\texttt{math.floor(x)} & round down \\
+\texttt{math.sqrt(x)} & square root \\
+\texttt{math.pow(x,y)} & power \\
+\texttt{math.log(x)} & natural log \\
+\texttt{math.sin/cos/tan} & trig \\
+\texttt{math.pi} & 3.14159... \\
+\texttt{math.e} & 2.71828... \\
+\end{tabular}
+}
+
+\section*{Common Idioms}
+
+\textbf{Swap:} \texttt{a, b = b, a}
+
+\textbf{Default dict val:} \\
+\texttt{d.setdefault(k, []).append(x)}
+
+\textbf{Flatten list:} \\
+\texttt{[item for sub in lst for item in sub]}
+
+\textbf{Unique ordered:} \\
+\texttt{list(dict.fromkeys(lst))}
+
+\textbf{Count occurrences:} \\
+\texttt{from collections import Counter} \\
+\texttt{Counter(lst)}
+
+\section*{Time Complexity (Big-O)}
+
+{\fontsize{5.5pt}{6.5pt}\selectfont
+\renewcommand{\arraystretch}{0.88}
+\begin{tabular}{@{}ll@{}}
+\texttt{lst[i]} & $O(1)$ \\
+\texttt{lst.append(x)} & $O(1)$ \\
+\texttt{lst.insert(0,x)} & $O(n)$ \\
+\texttt{x in lst} & $O(n)$ \\
+\texttt{lst.sort()} & $O(n \log n)$ \\
+\texttt{d[k]} & $O(1)$ avg \\
+\texttt{k in d} & $O(1)$ avg \\
+\texttt{s.add(x)} & $O(1)$ avg \\
+\texttt{x in s} & $O(1)$ avg \\
+\end{tabular}
+}
+
+\section*{Debugging}
+
+\texttt{breakpoint()} -- drop to pdb \\
+\texttt{python -m pdb script.py}
+
+\subsection*{pdb commands}
+\texttt{n} next, \texttt{s} step, \texttt{c} continue \\
+\texttt{l} list, \texttt{p var} print \\
+\texttt{b line} breakpoint, \texttt{q} quit
+
+\section*{pip \& Modules}
+
+{\fontsize{5.5pt}{6.5pt}\selectfont\ttfamily
+pip install package \\
+pip install -r requirements.txt \\
+pip freeze > requirements.txt \\
+import sys; sys.path
+}
+
+\vfill
+
+{\fontsize{4.5pt}{5.5pt}\selectfont\textcolor{cdGray}{%
+Python 3 Ultra-Compact Reference \textbar{} Maximize information density%
+}}
+
+\end{multicols*}
+
+\end{document}

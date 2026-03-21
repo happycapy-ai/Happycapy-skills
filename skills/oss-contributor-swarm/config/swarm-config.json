@@ -1,0 +1,236 @@
+{
+  "swarm": {
+    "name": "oss-contributor-swarm",
+    "version": "2.1.0",
+    "description": "Autonomous multi-agent system for meaningful open source contributions"
+  },
+  "agents": {
+    "count": 11,
+    "list": [
+      "agent-0-strategic-planner",
+      "agent-0-qualifier",
+      "agent-1-scout",
+      "agent-2-analyst",
+      "agent-3-explorer",
+      "agent-4-coder",
+      "agent-5-tester",
+      "agent-6-docs",
+      "agent-7-pr",
+      "agent-8-reviews",
+      "agent-9-status-monitor"
+    ],
+    "timeout_per_agent": 600,
+    "retry_failed": true,
+    "max_retries": 2
+  },
+  "strategy": {
+    "mode": "meaningful_impact",
+    "prioritize_features": true,
+    "avoid_trivial": true,
+    "minimum_impact_score": 50,
+    "contribution_types": {
+      "feature": {"enabled": true, "priority": 1, "score_boost": 40},
+      "bug-fix": {"enabled": true, "priority": 2, "score_boost": 35},
+      "performance": {"enabled": true, "priority": 3, "score_boost": 30},
+      "dx-enhancement": {"enabled": true, "priority": 4, "score_boost": 28},
+      "test-coverage": {"enabled": true, "priority": 5, "score_boost": 20},
+      "documentation": {"enabled": false, "priority": 10, "score_boost": -10},
+      "typo": {"enabled": false, "priority": 99, "score_boost": -30},
+      "formatting": {"enabled": false, "priority": 99, "score_boost": -40}
+    }
+  },
+  "repo_qualification": {
+    "enabled": true,
+    "min_stars": 100,
+    "max_stars": 15000,
+    "max_days_since_commit": 30,
+    "max_open_issues_ratio": 0.5,
+    "require_contributing_md": true,
+    "require_license": true,
+    "skip_complex_cla": true,
+    "min_qualification_score": 60,
+    "prefer_languages": ["Python", "TypeScript", "JavaScript", "Go", "Rust"],
+    "scoring": {
+      "stars_weight": 20,
+      "recency_weight": 25,
+      "contributing_weight": 20,
+      "merge_time_weight": 20,
+      "issues_ratio_weight": 15
+    }
+  },
+  "issue_selection": {
+    "strategy": "meaningful_first",
+    "quality_filters": {
+      "min_body_length": 150,
+      "max_body_length": 8000,
+      "max_comments": 10,
+      "min_age_days": 1,
+      "max_age_days": 90,
+      "require_no_linked_prs": true,
+      "require_unassigned": true,
+      "require_user_demand": true
+    },
+    "priority_types": [
+      {"type": "feature", "score": 40, "enabled": true},
+      {"type": "bug-user-facing", "score": 35, "enabled": true},
+      {"type": "performance", "score": 30, "enabled": true},
+      {"type": "dx-improvement", "score": 28, "enabled": true},
+      {"type": "test-coverage", "score": 20, "enabled": true},
+      {"type": "error-handling", "score": 18, "enabled": true},
+      {"type": "documentation", "score": -10, "enabled": false},
+      {"type": "typo", "score": -30, "enabled": false},
+      {"type": "formatting", "score": -40, "enabled": false}
+    ],
+    "user_demand_signals": {
+      "reactions_weight": 10,
+      "plus_one_comments_weight": 15,
+      "me_too_weight": 15,
+      "maintainer_interest_weight": 20
+    },
+    "avoid_patterns": [
+      "typo",
+      "typos",
+      "spelling",
+      "whitespace",
+      "formatting",
+      "style only",
+      "cosmetic",
+      "breaking change",
+      "major refactor",
+      "security",
+      "authentication",
+      "payment",
+      "database migration",
+      "deprecation",
+      "api change"
+    ],
+    "min_issue_score": 50
+  },
+  "github": {
+    "search_labels": [
+      "enhancement",
+      "feature",
+      "feature-request",
+      "new feature",
+      "help wanted",
+      "good first issue",
+      "bug",
+      "needs-fix"
+    ],
+    "excluded_labels": [
+      "wontfix",
+      "duplicate",
+      "invalid",
+      "question",
+      "discussion",
+      "stale",
+      "blocked",
+      "needs-discussion",
+      "needs-design",
+      "documentation",
+      "docs"
+    ],
+    "languages": [
+      "Python",
+      "TypeScript",
+      "JavaScript",
+      "Go",
+      "Rust",
+      "Java",
+      "Ruby"
+    ],
+    "rate_limit_delay_ms": 2000,
+    "rate_limit_min_remaining": 100
+  },
+  "contribution": {
+    "commit_convention": "conventional",
+    "branch_prefix": "feat/",
+    "sign_commits": false,
+    "pr_draft": false,
+    "author_name": null,
+    "author_email": null,
+    "no_ai_mentions": true,
+    "pr_template": {
+      "include_issue_link": true,
+      "include_changes_summary": true,
+      "include_verification_steps": true,
+      "include_ai_attribution": false
+    }
+  },
+  "monitoring": {
+    "check_interval_seconds": 300,
+    "max_review_wait_days": 14,
+    "stale_pr_days": 7,
+    "escalation_triggers": [
+      "major rework requested",
+      "approach disagreement",
+      "maintainer unresponsive",
+      "security concern raised",
+      "scope expansion requested"
+    ]
+  },
+  "auto_fix": {
+    "enabled": true,
+    "allowed_types": [
+      "typo",
+      "style",
+      "formatting",
+      "quotes",
+      "semicolons",
+      "whitespace",
+      "import_order",
+      "comment_addition"
+    ],
+    "disallowed_types": [
+      "logic_change",
+      "architecture",
+      "security",
+      "api_change",
+      "new_dependency"
+    ],
+    "max_auto_fix_attempts": 3
+  },
+  "continuous": {
+    "enabled": true,
+    "mode": "targeted",
+    "target_prs": 5,
+    "target_daily_prs": {
+      "min": 3,
+      "max": 5,
+      "hard_limit": 10
+    },
+    "cooldown_between_cycles_seconds": 30,
+    "max_concurrent_prs": 3,
+    "daily_pr_limit": 10,
+    "monitoring_interval_seconds": 300,
+    "daily_summary_hour": 23
+  },
+  "learning": {
+    "enabled": true,
+    "history_file": "shared/contribution-history.json",
+    "track_patterns": true,
+    "boost_successful_repos": 15,
+    "boost_successful_types": 10,
+    "penalize_slow_repos": true,
+    "auto_avoid_threshold": 3,
+    "success_metrics": {
+      "target_success_rate": 0.8,
+      "target_merge_time_hours": 72,
+      "target_auto_fix_rate": 0.8
+    }
+  },
+  "safety": {
+    "never_force_push": true,
+    "never_modify_ci": true,
+    "respect_code_owners": true,
+    "check_contributing_guide": true,
+    "verify_no_secrets": true,
+    "max_files_per_pr": 10,
+    "max_lines_changed": 300,
+    "require_human_approval_for": [
+      "security_fixes",
+      "dependency_updates",
+      "config_changes"
+    ]
+  }
+}

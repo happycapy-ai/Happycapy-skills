@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --color-cortex-bg: #0a0e1a;
+  --color-cortex-card: #111827;
+  --color-cortex-elevated: #1f2937;
+  --color-cortex-border: #1f2937;
+  --color-cortex-border-hover: #374151;
+  --color-cortex-coral: #FF6B4A;
+  --color-cortex-moss: #7D9B76;
+  --color-cortex-teal: #7BA3A8;
+  --color-cortex-terra: #C67A6B;
+  --color-cortex-sand: #9B8B7A;
+  --color-cortex-purple: #8B5CF6;
+  --color-cortex-blue: #3B82F6;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-cortex-bg);
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #374151; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #4b5563; }
+
+/* Pulse animation for health indicator */
+@keyframes cortex-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.05); }
+}
+.animate-cortex-pulse { animation: cortex-pulse 2s ease-in-out infinite; }
+
+/* Shimmer for loading skeleton */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Panel hover effect */
+.cortex-panel {
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.cortex-panel:hover {
+  border-color: #374151;
+  box-shadow: 0 0 20px rgba(255, 107, 74, 0.04), 0 8px 24px rgba(0, 0, 0, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Skeleton shimmer */
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: #1f2937;
+  border-radius: 8px;
+}
+.skeleton::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.04), transparent);
+  animation: shimmer 1.5s infinite;
+}
