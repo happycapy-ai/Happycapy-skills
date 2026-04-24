@@ -65,6 +65,11 @@ Postgres performance optimization and best practices for Supabase. Covers query 
 
 ### Community Skills
 
+#### [360-panorama-viewer](./360-panorama-viewer/)
+Build fully self-contained 360° equirectangular panorama viewers as single HTML files. Uses Three.js to render immersive spherical panoramas with drag-to-look, zoom, auto-rotate, and scene-switcher sidebar. All panorama images embedded as base64 JPEG — no server needed. Perfect for VR panorama apps, immersive scene galleries, and interactive 360° experiences.
+
+**Original Source:** Community contribution
+
 #### [3d-web-experience](./skills/3d-web-experience/)
 Expert in building 3D experiences for the web using Three.js, React Three Fiber, Spline, and WebGL. Covers product configurators, 3D portfolios, immersive websites, scroll-driven 3D interactions, and performance optimization.
 
@@ -240,6 +245,7 @@ cd Happycapy-skills
 
 # Install a specific skill
 mkdir -p ~/.claude/skills
+cp -r 360-panorama-viewer ~/.claude/skills/
 cp -r skills/skill-creator ~/.claude/skills/
 cp -r skills/pdf ~/.claude/skills/
 cp -r skills/find-skills ~/.claude/skills/
@@ -249,6 +255,7 @@ cp -r skills/ai-video-generation ~/.claude/skills/
 cp -r skills/supabase-postgres-best-practices ~/.claude/skills/
 
 # Or install all skills at once
+cp -r 360-panorama-viewer ~/.claude/skills/
 cp -r skills/* ~/.claude/skills/
 ```
 
