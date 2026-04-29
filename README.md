@@ -26,6 +26,13 @@
 </p>
 
 <p align="center">
+  <br/>
+  <a href="https://www.producthunt.com/posts/happycapy?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-happycapy" target="_blank"><img src="./assets/product-hunt-badge.svg" alt="Happycapy - The agent-native computer, for the rest of us | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+  <br/>
+  <br/>
+</p>
+
+<p align="center">
   A curated collection of drop-in Claude Code skills sourced from leading open projects
   and community maintainers. Every skill lives in its own folder, keeps source
   attribution, and is ready to install into <code>~/.claude/skills</code>.
