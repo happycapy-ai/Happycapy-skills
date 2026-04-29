@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">HappyCapy Skills hero banner</title>
+  <desc id="desc">A clean showcase banner for the HappyCapy Skills repository.</desc>
+  <defs>
+    <linearGradient id="bg" x1="80" y1="80" x2="1200" y2="640" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F3F7FF"/>
+    </linearGradient>
+    <linearGradient id="cta" x1="0" y1="0" x2="0" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4DA3FF"/>
+      <stop offset="1" stop-color="#247BFF"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="1280" height="720" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="18"/>
+      <feGaussianBlur stdDeviation="18"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.0862745 0 0 0 0 0.145098 0 0 0 0 0.290196 0 0 0 0.12 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1" result="shape"/>
+    </filter>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="2.2" fill="#DDE5F6"/>
+    </pattern>
+  </defs>
+
+  <rect width="1280" height="720" rx="36" fill="#F8FAFC"/>
+  <rect x="40" y="40" width="1200" height="640" rx="28" fill="url(#bg)" stroke="#E5EAF5"/>
+  <rect x="845" y="116" width="270" height="388" rx="24" fill="url(#dots)" opacity="0.95"/>
+  <circle cx="1024" cy="565" r="74" fill="#EAF1FF"/>
+  <circle cx="1090" cy="150" r="30" fill="#EAF1FF"/>
+
+  <g filter="url(#shadow)">
+    <rect x="286" y="178" width="708" height="234" rx="28" fill="#FFFFFF"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="328" y="228" width="108" height="108" rx="28" fill="#247BFF"/>
+  </g>
+
+  <circle cx="364" cy="253" r="11" fill="#FFFFFF"/>
+  <circle cx="400" cy="253" r="11" fill="#FFFFFF"/>
+  <ellipse cx="382" cy="284" rx="31" ry="26" fill="#FFFFFF"/>
+  <circle cx="370" cy="281" r="4.5" fill="#247BFF"/>
+  <circle cx="394" cy="281" r="4.5" fill="#247BFF"/>
+  <ellipse cx="382" cy="297" rx="11" ry="8" fill="#247BFF"/>
+  <circle cx="375" cy="296" r="2.5" fill="#FFFFFF"/>
+  <circle cx="389" cy="296" r="2.5" fill="#FFFFFF"/>
+
+  <text x="472" y="266" fill="#111827" font-family="Segoe UI, Arial, sans-serif" font-size="52" font-weight="700">HappyCapy Skills</text>
+  <text x="472" y="314" fill="#4B5563" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="500">Curated, drop-in skills for Claude Code and HappyCapy</text>
+
+  <g>
+    <rect x="472" y="346" width="108" height="34" rx="17" fill="#F3F6FB" stroke="#D5DEED"/>
+    <text x="526" y="368" fill="#475467" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600">45 skills</text>
+
+    <rect x="592" y="346" width="154" height="34" rx="17" fill="#F3F6FB" stroke="#D5DEED"/>
+    <text x="669" y="368" fill="#475467" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600">Curated catalog</text>
+
+    <rect x="758" y="346" width="162" height="34" rx="17" fill="#F3F6FB" stroke="#D5DEED"/>
+    <text x="839" y="368" fill="#475467" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600">Install by copy</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="531" y="448" width="218" height="56" rx="16" fill="url(#cta)"/>
+  </g>
+  <text x="640" y="483" fill="#FFFFFF" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">Explore the collection</text>
+
+  <text x="640" y="558" fill="#374151" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="600">Skill folders stay portable by design.</text>
+  <text x="640" y="592" fill="#6B7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="500">Copy the capability you need, keep attribution intact, and move faster.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="188" y="560" width="220" height="76" rx="22" fill="#FFFFFF"/>
+    <rect x="530" y="560" width="220" height="76" rx="22" fill="#FFFFFF"/>
+    <rect x="872" y="560" width="220" height="76" rx="22" fill="#FFFFFF"/>
+  </g>
+
+  <text x="298" y="593" fill="#247BFF" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Official + Community</text>
+  <text x="298" y="620" fill="#6B7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="500">Anthropic, Vercel, Supabase, Inference.sh, and more</text>
+
+  <text x="640" y="593" fill="#247BFF" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Drop-in install</text>
+  <text x="640" y="620" fill="#6B7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="500">Every skill ships as a self-contained folder with a SKILL.md</text>
+
+  <text x="982" y="593" fill="#247BFF" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">HappyCapy-ready</text>
+  <text x="982" y="620" fill="#6B7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="500">Includes Feishu, social publishing, memory, and agent workflows</text>
+</svg>
