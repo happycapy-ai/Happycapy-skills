@@ -1,86 +1,150 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" fill="none" role="img" aria-labelledby="title desc">
-  <title id="title">HappyCapy Skills hero banner</title>
-  <desc id="desc">A clean showcase banner for the HappyCapy Skills repository.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Happycapy Skills hero banner</title>
+  <desc id="desc">A warm, happycapy.ai-inspired hero banner for the Happycapy Skills repository.</desc>
   <defs>
-    <linearGradient id="bg" x1="80" y1="80" x2="1200" y2="640" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFFFFF"/>
-      <stop offset="1" stop-color="#F3F7FF"/>
-    </linearGradient>
-    <linearGradient id="cta" x1="0" y1="0" x2="0" y2="56" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#4DA3FF"/>
-      <stop offset="1" stop-color="#247BFF"/>
-    </linearGradient>
-    <filter id="shadow" x="0" y="0" width="1280" height="720" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <filter id="softShadow" x="0" y="0" width="1600" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
       <feFlood flood-opacity="0" result="BackgroundImageFix"/>
       <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-      <feOffset dy="18"/>
-      <feGaussianBlur stdDeviation="18"/>
-      <feColorMatrix type="matrix" values="0 0 0 0 0.0862745 0 0 0 0 0.145098 0 0 0 0 0.290196 0 0 0 0.12 0"/>
+      <feOffset dy="16"/>
+      <feGaussianBlur stdDeviation="20"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.137255 0 0 0 0 0.14902 0 0 0 0 0.207843 0 0 0 0.08 0"/>
       <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1"/>
       <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1" result="shape"/>
     </filter>
-    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
-      <circle cx="4" cy="4" r="2.2" fill="#DDE5F6"/>
-    </pattern>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1110 470) rotate(90) scale(360 360)">
+      <stop stop-color="#FFF9F2"/>
+      <stop offset="1" stop-color="#F7F1EA"/>
+    </radialGradient>
   </defs>
 
-  <rect width="1280" height="720" rx="36" fill="#F8FAFC"/>
-  <rect x="40" y="40" width="1200" height="640" rx="28" fill="url(#bg)" stroke="#E5EAF5"/>
-  <rect x="845" y="116" width="270" height="388" rx="24" fill="url(#dots)" opacity="0.95"/>
-  <circle cx="1024" cy="565" r="74" fill="#EAF1FF"/>
-  <circle cx="1090" cy="150" r="30" fill="#EAF1FF"/>
+  <rect width="1600" height="900" rx="36" fill="#F4EEE7"/>
+  <g filter="url(#softShadow)">
+    <rect x="28" y="28" width="1544" height="844" rx="32" fill="#F7F1EA"/>
+  </g>
+  <line x1="28" y1="132.5" x2="1572" y2="132.5" stroke="#E9DFD3"/>
 
-  <g filter="url(#shadow)">
-    <rect x="286" y="178" width="708" height="234" rx="28" fill="#FFFFFF"/>
+  <g stroke="#111111" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M116 58C101 61 90 72 88 90C86 107 94 121 109 126"/>
+    <path d="M90 94C104 87 124 85 146 90C156 93 164 99 165 108"/>
+    <path d="M110 126C126 123 141 124 155 128"/>
+    <path d="M147 70L155 57L170 55L178 65"/>
+    <path d="M130 52L132 45L139 44L143 50"/>
+    <path d="M103 96L103 121"/>
+    <path d="M161 108C171 104 176 96 176 87"/>
+    <circle cx="121" cy="89" r="2.8" fill="#111111" stroke="none"/>
   </g>
 
-  <g filter="url(#shadow)">
-    <rect x="328" y="228" width="108" height="108" rx="28" fill="#247BFF"/>
+  <text x="196" y="95" fill="#111111" font-family="Georgia, 'Times New Roman', serif" font-size="40" font-weight="500">happycapy</text>
+  <text x="560" y="95" fill="#6C6F7B" font-family="'Segoe UI', Arial, sans-serif" font-size="24" font-weight="500" text-anchor="middle">Skill Store</text>
+  <text x="700" y="95" fill="#6C6F7B" font-family="'Segoe UI', Arial, sans-serif" font-size="24" font-weight="500" text-anchor="middle">Pricing</text>
+  <text x="808" y="95" fill="#6C6F7B" font-family="'Segoe UI', Arial, sans-serif" font-size="24" font-weight="500" text-anchor="middle">Blog</text>
+  <text x="922" y="95" fill="#6C6F7B" font-family="'Segoe UI', Arial, sans-serif" font-size="24" font-weight="500" text-anchor="middle">Tools</text>
+
+  <rect x="1296" y="48" width="212" height="58" rx="29" fill="#111111"/>
+  <text x="1402" y="85" fill="#FFFFFF" font-family="'Segoe UI', Arial, sans-serif" font-size="22" font-weight="600" text-anchor="middle">Try Happycapy</text>
+
+  <text x="140" y="360" fill="#202B3C" font-family="Georgia, 'Times New Roman', serif" font-size="82" font-weight="500">The</text>
+  <text x="140" y="472" fill="#202B3C" font-family="Georgia, 'Times New Roman', serif" font-size="118" font-style="italic" font-weight="500">skill-native</text>
+  <text x="140" y="588" fill="#202B3C" font-family="Georgia, 'Times New Roman', serif" font-size="84" font-weight="500">skill store</text>
+  <text x="140" y="682" fill="#48556A" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="400">For Claude Code teams.</text>
+
+  <rect x="140" y="736" width="262" height="76" rx="38" fill="#111111"/>
+  <text x="271" y="785" fill="#FFFFFF" font-family="'Segoe UI', Arial, sans-serif" font-size="28" font-weight="600" text-anchor="middle">Explore skills</text>
+
+  <text x="140" y="858" fill="#FF6A3D" font-family="'Segoe UI', Arial, sans-serif" font-size="24" font-weight="600">Portable folders.</text>
+  <text x="332" y="858" fill="#5E6777" font-family="'Segoe UI', Arial, sans-serif" font-size="24" font-weight="500">Source attribution intact. Ready for ~/.claude/skills.</text>
+
+  <circle cx="1115" cy="486" r="336" fill="url(#glow)"/>
+
+  <g stroke="#1A1A1A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M860 290L820 222"/>
+    <path d="M860 290L900 226"/>
+    <path d="M860 290L860 468"/>
+    <path d="M928 304L892 236"/>
+    <path d="M928 304L968 240"/>
+    <path d="M928 304L928 472"/>
+    <path d="M1306 286L1268 218"/>
+    <path d="M1306 286L1348 222"/>
+    <path d="M1306 286L1306 468"/>
+    <path d="M1374 298L1338 232"/>
+    <path d="M1374 298L1412 240"/>
+    <path d="M1374 298L1374 474"/>
+
+    <path d="M788 220C806 196 856 188 896 204C932 218 948 242 952 270"/>
+    <path d="M818 248C836 232 880 228 920 242"/>
+    <path d="M1228 214C1248 194 1292 188 1330 202C1364 214 1382 238 1388 268"/>
+    <path d="M1252 244C1274 228 1316 226 1352 238"/>
+
+    <path d="M1118 474C1094 440 1056 424 1014 430C968 438 936 470 928 514C918 566 952 622 1012 636C1066 648 1124 634 1152 596C1184 554 1170 510 1118 474Z" fill="#FAF7F1"/>
+    <path d="M1122 468C1172 438 1234 438 1280 470C1328 504 1342 572 1302 626C1266 674 1188 694 1108 672"/>
+    <path d="M1218 438C1232 420 1258 408 1280 410C1294 410 1308 416 1314 430"/>
+    <path d="M1066 426C1074 406 1090 392 1110 386C1128 380 1146 382 1156 394"/>
+    <path d="M1234 494C1244 488 1256 486 1268 488C1278 490 1288 496 1294 504"/>
+    <path d="M1146 518C1154 512 1166 510 1178 512C1186 514 1194 520 1198 528"/>
+    <circle cx="1226" cy="493" r="6" fill="#1A1A1A" stroke="none"/>
+    <circle cx="1142" cy="522" r="6" fill="#1A1A1A" stroke="none"/>
+    <path d="M1270 542C1294 542 1310 550 1318 564"/>
+    <path d="M1280 560C1260 572 1240 578 1222 580"/>
+    <path d="M1092 586C1088 622 1084 656 1090 688"/>
+    <path d="M1164 614C1158 640 1158 676 1166 710"/>
+    <path d="M1208 628C1214 652 1214 684 1208 720"/>
+    <path d="M1284 616C1292 644 1296 678 1292 714"/>
+    <path d="M1084 714L1118 714"/>
+    <path d="M1158 730L1196 730"/>
+    <path d="M1196 728L1232 728"/>
+    <path d="M1276 724L1314 724"/>
+
+    <ellipse cx="1098" cy="700" rx="34" ry="18" fill="#FAF7F1"/>
+    <path d="M1056 734L1144 734"/>
+    <path d="M1058 742L1144 742"/>
+    <path d="M1042 712L1062 670L1132 670L1152 712" fill="#FAF7F1"/>
+    <path d="M1070 670L1066 744"/>
+    <path d="M1126 670L1132 744"/>
+
+    <path d="M1212 560L1286 546L1316 616L1246 638Z" fill="#D8B182"/>
+    <circle cx="1244" cy="590" r="12" fill="#7CC0FF"/>
+    <circle cx="1278" cy="582" r="10" fill="#F3D165"/>
+    <circle cx="1290" cy="610" r="10" fill="#F597B8"/>
+    <circle cx="1252" cy="622" r="9" fill="#A7D37B"/>
+    <path d="M1188 600L1232 594"/>
+    <path d="M1200 586L1244 576"/>
+    <path d="M1186 574L1204 540"/>
+
+    <path d="M1310 516L1372 462"/>
+    <path d="M1366 450L1412 416"/>
+    <path d="M1384 406L1406 610"/>
+    <path d="M1314 462L1452 450L1458 664L1326 680Z" fill="#FCFBF7"/>
+    <path d="M1328 476L1440 468L1446 648L1334 660Z"/>
+    <path d="M1446 648L1490 712"/>
+    <path d="M1334 660L1286 726"/>
+    <path d="M1416 418L1444 402"/>
+
+    <path d="M1352 508C1384 474 1410 482 1434 502V548C1408 566 1382 576 1352 564Z" fill="#5CB4F8" stroke="none"/>
+    <path d="M1352 564C1386 576 1410 568 1434 548V602C1406 626 1380 634 1352 620Z" fill="#F2D357" stroke="none"/>
+    <path d="M1352 620C1378 632 1402 630 1434 604V636C1410 656 1384 662 1352 650Z" fill="#6DC1F8" stroke="none"/>
+    <path d="M1372 514C1382 498 1394 490 1410 486"/>
+    <path d="M1390 560C1402 544 1414 536 1428 532"/>
+    <path d="M1378 620C1390 610 1406 602 1422 596"/>
+
+    <path d="M1006 640C1018 626 1034 618 1054 616"/>
+    <path d="M1032 660C1044 650 1060 644 1076 642"/>
+    <path d="M1090 674C1102 666 1118 662 1132 662"/>
+    <path d="M1176 676C1188 668 1200 662 1214 662"/>
+    <path d="M1230 660C1244 652 1260 648 1274 650"/>
+    <path d="M1274 638C1288 628 1302 622 1314 622"/>
   </g>
 
-  <circle cx="364" cy="253" r="11" fill="#FFFFFF"/>
-  <circle cx="400" cy="253" r="11" fill="#FFFFFF"/>
-  <ellipse cx="382" cy="284" rx="31" ry="26" fill="#FFFFFF"/>
-  <circle cx="370" cy="281" r="4.5" fill="#247BFF"/>
-  <circle cx="394" cy="281" r="4.5" fill="#247BFF"/>
-  <ellipse cx="382" cy="297" rx="11" ry="8" fill="#247BFF"/>
-  <circle cx="375" cy="296" r="2.5" fill="#FFFFFF"/>
-  <circle cx="389" cy="296" r="2.5" fill="#FFFFFF"/>
-
-  <text x="472" y="266" fill="#111827" font-family="Segoe UI, Arial, sans-serif" font-size="52" font-weight="700">HappyCapy Skills</text>
-  <text x="472" y="314" fill="#4B5563" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="500">Curated, drop-in skills for Claude Code and HappyCapy</text>
-
-  <g>
-    <rect x="472" y="346" width="108" height="34" rx="17" fill="#F3F6FB" stroke="#D5DEED"/>
-    <text x="526" y="368" fill="#475467" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600">45 skills</text>
-
-    <rect x="592" y="346" width="154" height="34" rx="17" fill="#F3F6FB" stroke="#D5DEED"/>
-    <text x="669" y="368" fill="#475467" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600">Curated catalog</text>
-
-    <rect x="758" y="346" width="162" height="34" rx="17" fill="#F3F6FB" stroke="#D5DEED"/>
-    <text x="839" y="368" fill="#475467" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600">Install by copy</text>
+  <g fill="#2A7BD8">
+    <circle cx="1416" cy="820" r="6"/>
+    <circle cx="1440" cy="808" r="5"/>
+    <circle cx="1088" cy="790" r="5"/>
   </g>
-
-  <g filter="url(#shadow)">
-    <rect x="531" y="448" width="218" height="56" rx="16" fill="url(#cta)"/>
+  <g fill="#F3C651">
+    <circle cx="1180" cy="778" r="6"/>
+    <circle cx="1222" cy="800" r="5"/>
   </g>
-  <text x="640" y="483" fill="#FFFFFF" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">Explore the collection</text>
-
-  <text x="640" y="558" fill="#374151" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="600">Skill folders stay portable by design.</text>
-  <text x="640" y="592" fill="#6B7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="500">Copy the capability you need, keep attribution intact, and move faster.</text>
-
-  <g filter="url(#shadow)">
-    <rect x="188" y="560" width="220" height="76" rx="22" fill="#FFFFFF"/>
-    <rect x="530" y="560" width="220" height="76" rx="22" fill="#FFFFFF"/>
-    <rect x="872" y="560" width="220" height="76" rx="22" fill="#FFFFFF"/>
+  <g fill="#F48CAA">
+    <circle cx="1332" cy="808" r="5"/>
+    <circle cx="1364" cy="792" r="4"/>
   </g>
-
-  <text x="298" y="593" fill="#247BFF" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Official + Community</text>
-  <text x="298" y="620" fill="#6B7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="500">Anthropic, Vercel, Supabase, Inference.sh, and more</text>
-
-  <text x="640" y="593" fill="#247BFF" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Drop-in install</text>
-  <text x="640" y="620" fill="#6B7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="500">Every skill ships as a self-contained folder with a SKILL.md</text>
-
-  <text x="982" y="593" fill="#247BFF" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">HappyCapy-ready</text>
-  <text x="982" y="620" fill="#6B7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="500">Includes Feishu, social publishing, memory, and agent workflows</text>
 </svg>

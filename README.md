@@ -1,9 +1,9 @@
 <div align="center">
-  <h1>HappyCapy Skills</h1>
-  <h3>Install a Better Skill Stack for Claude Code</h3>
+  <h1>Happycapy Skills</h1>
+  <h3>The skill-native collection for Claude Code</h3>
   <p>
     Curated, production-ready skills for coding, design, documents, media, research,
-    and automation in HappyCapy and Claude Code.
+    and automation in Happycapy and Claude Code.
   </p>
   <p>
     <a href="#quick-start">Quick Start</a> |
@@ -17,12 +17,18 @@
     <img src="https://img.shields.io/github/stars/happycapy-ai/Happycapy-skills?style=flat-square" alt="GitHub stars" />
     <img src="https://img.shields.io/github/license/happycapy-ai/Happycapy-skills?style=flat-square" alt="License" />
     <img src="https://img.shields.io/badge/skills-45-3b82f6?style=flat-square" alt="45 skills" />
-    <img src="https://img.shields.io/badge/curation-HappyCapy-f59e0b?style=flat-square" alt="Curated by HappyCapy" />
+    <img src="https://img.shields.io/badge/curation-Happycapy-f59e0b?style=flat-square" alt="Curated by Happycapy" />
   </p>
 </div>
 
 <p align="center">
-  <img src="./assets/happycapy-skills-hero.svg" alt="HappyCapy Skills hero banner" width="100%" />
+  <img src="./assets/happycapy-skills-hero.svg" alt="Happycapy Skills hero banner" width="100%" />
+</p>
+
+<p align="center">
+  <a href="https://www.producthunt.com/products/happycapy">
+    <img src="./assets/product-hunt-badge.svg" alt="Happycapy on Product Hunt" height="64" />
+  </a>
 </p>
 
 <p align="center">
@@ -33,6 +39,7 @@
 
 <p align="center">
   <a href="https://github.com/happycapy-ai/Happycapy-skills">Repository</a> |
+  <a href="https://www.producthunt.com/products/happycapy">Product Hunt</a> |
   <a href="https://support.claude.com/en/articles/12512176-what-are-skills">What are skills?</a> |
   <a href="https://support.claude.com/en/articles/12512180-using-skills-in-claude">Using skills</a> |
   <a href="https://support.claude.com/en/articles/12512198-creating-custom-skills">Create custom skills</a> |
@@ -45,16 +52,16 @@
   </em>
 </p>
 
-## Why HappyCapy Skills
+## Why Happycapy Skills
 
-HappyCapy Skills is built for people who want a cleaner way to extend Claude Code without
+Happycapy Skills is built for people who want a cleaner way to extend Claude Code without
 assembling a toolbox from scratch.
 
 - Curated instead of dumped. Skills are selected because they solve real workflows.
 - Drop-in installation. Each skill is a self-contained folder with a `SKILL.md`.
 - Broad coverage. The catalog spans app development, design, media, writing, research, and automation.
 - Attribution preserved. Original source and license context stay with each skill directory.
-- HappyCapy-aware additions. Some skills are adapted specifically for HappyCapy environments and MCP workflows.
+- Happycapy-aware additions. Some skills are adapted specifically for Happycapy environments and MCP workflows.
 
 ## Featured Collections
 
@@ -65,7 +72,7 @@ assembling a toolbox from scratch.
 | Design and documents | Slides, PowerPoint, PDFs, LaTeX, storytelling, writing, and prompt refinement | Client deliverables, reports, documentation |
 | Media and creative AI | Image generation, video generation, film workflows, frame extraction, GIF creation | Visual content, prototypes, creative production |
 | Social and creator workflows | Reddit, Xiaohongshu, Instagram carousel creation, and multi-platform publishing | Marketing, community growth, recruiting |
-| HappyCapy integrations | Feishu MCP, utilities, and environment-specific tools | Connected workflows inside HappyCapy |
+| Happycapy integrations | Feishu MCP, utilities, and environment-specific tools | Connected workflows inside Happycapy |
 
 ## Quick Start
 
@@ -96,7 +103,7 @@ inside that skill folder and move with it.
 
 | Skill | What it helps with |
 | --- | --- |
-| [`happycapy-skill-creator`](./skills/happycapy-skill-creator/) | Adapts or builds new skills for HappyCapy by reusing proven upstream patterns |
+| [`happycapy-skill-creator`](./skills/happycapy-skill-creator/) | Adapts or builds new skills for Happycapy by reusing proven upstream patterns |
 | [`find-skills`](./skills/find-skills/) | Discovers installable skills when users ask, "How do I do X?" |
 | [`frontend-slides`](./skills/frontend-slides/) | Creates rich HTML presentations with visual direction and animation |
 | [`pdf`](./skills/pdf/) | Handles extraction, OCR, merging, form filling, and PDF generation |
@@ -114,7 +121,7 @@ The full catalog currently includes **45 skills** across six collections.
 
 - [`find-skills`](./skills/find-skills/) - Discover installable skills when users ask how to do something.
 - [`skill-creator`](./skills/skill-creator/) - Design, structure, and package new Claude skills.
-- [`happycapy-skill-creator`](./skills/happycapy-skill-creator/) - Build HappyCapy-compatible skills by adapting proven upstream skills.
+- [`happycapy-skill-creator`](./skills/happycapy-skill-creator/) - Build Happycapy-compatible skills by adapting proven upstream skills.
 - [`contract-first-agents`](./skills/contract-first-agents/) - Coordinate multi-agent teams with a contract-first protocol.
 - [`oss-contributor-swarm`](./skills/oss-contributor-swarm/) - Run an autonomous open source contribution swarm.
 - [`llm-council`](./skills/llm-council/) - Compare and synthesize answers from multiple models side by side.
@@ -183,7 +190,7 @@ The full catalog currently includes **45 skills** across six collections.
 </details>
 
 <details>
-<summary><strong>HappyCapy Integrations and Utilities (2)</strong></summary>
+<summary><strong>Happycapy Integrations and Utilities (2)</strong></summary>
 
 - [`happycapy-feishu`](./skills/happycapy-feishu/) - Connect Claude to Feishu or Lark through MCP.
 - [`weather`](./skills/weather/) - Get current weather and forecasts without managing API keys.
