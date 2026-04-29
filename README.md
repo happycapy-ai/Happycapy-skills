@@ -26,12 +26,6 @@
 </p>
 
 <p align="center">
-  <a href="https://www.producthunt.com/products/happycapy">
-    <img src="./assets/product-hunt-badge.svg" alt="Happycapy on Product Hunt" height="64" />
-  </a>
-</p>
-
-<p align="center">
   A curated collection of drop-in Claude Code skills sourced from leading open projects
   and community maintainers. Every skill lives in its own folder, keeps source
   attribution, and is ready to install into <code>~/.claude/skills</code>.
@@ -39,7 +33,6 @@
 
 <p align="center">
   <a href="https://github.com/happycapy-ai/Happycapy-skills">Repository</a> |
-  <a href="https://www.producthunt.com/products/happycapy">Product Hunt</a> |
   <a href="https://support.claude.com/en/articles/12512176-what-are-skills">What are skills?</a> |
   <a href="https://support.claude.com/en/articles/12512180-using-skills-in-claude">Using skills</a> |
   <a href="https://support.claude.com/en/articles/12512198-creating-custom-skills">Create custom skills</a> |
