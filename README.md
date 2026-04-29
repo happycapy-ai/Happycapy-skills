@@ -22,12 +22,8 @@
 </div>
 
 <p align="center">
-  <img src="./assets/happycapy-skills-hero.svg" alt="Happycapy Skills hero banner" width="100%" />
-</p>
-
-<p align="center">
   <a href="https://www.producthunt.com/products/happycapy">
-    <img src="./assets/product-hunt-badge.svg" alt="Happycapy on Product Hunt" height="64" />
+    <img src="./assets/happycapy-skills-hero-gpt-image-2.png" alt="Happycapy Skills hero banner" width="100%" />
   </a>
 </p>
 
