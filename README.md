@@ -3,7 +3,7 @@
   <h3>The skill-native collection for Claude Code</h3>
   <p>
     Curated, production-ready skills for coding, design, documents, media, research,
-    and automation in Happycapy and Claude Code.
+    and automation in [Happycapy](https://happycapy.ai) and Claude Code.
   </p>
   <p>
     <a href="#quick-start">Quick Start</a> |
