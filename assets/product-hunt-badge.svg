@@ -2,10 +2,10 @@
   <title id="title">Happycapy featured on Product Hunt</title>
   <desc id="desc">A Product Hunt featured badge linking to Happycapy with 1,390 upvotes.</desc>
   <rect x="1.5" y="1.5" width="497" height="105" rx="21.5" fill="#FFFFFF" stroke="#FF6154" stroke-width="3"/>
-  <circle cx="54" cy="54" r="31" fill="#FF6154"/>
-  <path d="M47 36H57.1C67.4 36 74 42.6 74 52C74 61.4 67.4 68 57.1 68H47V36ZM56.6 60.2C61.8 60.2 65.2 56.9 65.2 52C65.2 47.1 61.8 43.8 56.6 43.8H55.7V60.2H56.6Z" fill="#FFFFFF"/>
-  <text x="106" y="39" fill="#FF6154" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700">FEATURED ON</text>
-  <text x="106" y="76" fill="#FF6154" font-family="'Segoe UI', Arial, sans-serif" font-size="37" font-weight="700">Product Hunt</text>
-  <path d="M432 25L444 48H420L432 25Z" fill="#FF6154"/>
-  <text x="432" y="76" fill="#FF6154" font-family="'Segoe UI', Arial, sans-serif" font-size="21" font-weight="700" text-anchor="middle">1,390</text>
+  <circle cx="60" cy="54" r="33" fill="#FF6154"/>
+  <text x="60" y="70" fill="#FFFFFF" font-family="'Segoe UI', Arial, sans-serif" font-size="44" font-weight="900" text-anchor="middle">P</text>
+  <text x="114" y="38" fill="#FF6154" font-family="'Segoe UI', Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2">FEATURED ON</text>
+  <text x="114" y="76" fill="#FF6154" font-family="'Segoe UI', Arial, sans-serif" font-size="36" font-weight="700">Product Hunt</text>
+  <path d="M432 28L446 52H418L432 28Z" fill="#FF6154"/>
+  <text x="432" y="80" fill="#FF6154" font-family="'Segoe UI', Arial, sans-serif" font-size="20" font-weight="700" text-anchor="middle">1,390</text>
 </svg>
