@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Document Title</title>
+<style>
+  :root {
+    /* Anthropic warm-editorial palette — keep these tokens. */
+    --ivory:    #FAF9F5;   /* page background, not white */
+    --paper:    #FFFFFF;   /* cards & panels sit on ivory */
+    --slate:    #141413;   /* primary text */
+    --clay:     #D97757;   /* terracotta accent */
+    --clay-d:   #B85C3E;
+    --oat:      #E3DACC;   /* warm fill / callout bg */
+    --olive:    #788C5D;   /* success / positive */
+    --rust:     #B04A3F;   /* danger / critical */
+
+    --g100:     #F0EEE6;
+    --g200:     #E6E3DA;
+    --g300:     #D1CFC5;   /* default border */
+    --g500:     #87867F;   /* muted text */
+    --g700:     #3D3D3A;   /* body text alt */
+
+    --serif: ui-serif, Georgia, "Times New Roman", Times, serif;
+    --sans:  system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --mono:  ui-monospace, "SF Mono", Menlo, Monaco, Consolas, monospace;
+
+    --radius-panel: 12px;
+    --radius-row:   8px;
+    --border:       1.5px solid var(--g300);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 56px 24px 120px;
+    background: var(--ivory);
+    color: var(--slate);
+    font-family: var(--sans);
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page { max-width: 860px; margin: 0 auto; }
+
+  /* ---------- headings ---------- */
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--g500);
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(32px, 4.6vw, 44px);
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    color: var(--slate);
+    margin: 0 0 14px;
+  }
+  h1 em {                       /* signature move: clay italic span in titles */
+    font-style: italic;
+    color: var(--clay);
+  }
+  .subtitle {
+    color: var(--g500);
+    font-size: 16px;
+    margin: 0 0 40px;
+    max-width: 60ch;
+  }
+  h2 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: -0.01em;
+    margin: 0 0 6px;
+  }
+  h2 + hr.rule {
+    border: none;
+    border-top: 1px solid var(--g300);
+    margin: 0 0 22px;
+  }
+  h3 { font-family: var(--sans); font-weight: 600; font-size: 15px; margin: 1.2rem 0 .4rem; }
+
+  section { margin-bottom: 52px; }
+
+  /* ---------- inline ---------- */
+  p, ul, ol { margin: .5rem 0; }
+  a { color: var(--clay); text-decoration: none; border-bottom: 1px dotted transparent; }
+  a:hover { border-bottom-color: var(--clay); }
+  code, pre { font-family: var(--mono); font-size: .9em; }
+  :not(pre) > code {
+    background: var(--g100);
+    border: 1px solid var(--g300);
+    border-radius: 4px;
+    padding: .05rem .3rem;
+  }
+  pre {
+    background: var(--slate);
+    color: #E8E6DE;
+    border-radius: var(--radius-panel);
+    padding: 18px 20px;
+    overflow: auto;
+    line-height: 1.65;
+  }
+
+  /* ---------- callout ---------- */
+  .callout {
+    border-left: 4px solid var(--clay);
+    background: var(--paper);
+    border-top: var(--border);
+    border-right: var(--border);
+    border-bottom: var(--border);
+    border-radius: 0 var(--radius-panel) var(--radius-panel) 0;
+    padding: 16px 20px;
+    margin: 1rem 0;
+  }
+  .callout.warn { border-left-color: var(--clay-d); }
+  .callout.err  { border-left-color: var(--rust); }
+  .callout.ok   { border-left-color: var(--olive); }
+
+  /* ---------- chips ---------- */
+  .chip {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    background: var(--g100);
+    border: var(--border);
+    color: var(--g700);
+    padding: 3px 9px;
+    border-radius: 999px;
+    vertical-align: middle;
+  }
+  .chip.ok   { background: #E8EEDB; border-color: #C8D3B0; color: #4D5E36; }
+  .chip.warn { background: #F5E4D7; border-color: #E8C6A9; color: #8A4A28; }
+  .chip.err  { background: #F1DBD6; border-color: #E0B2AA; color: #7A2F26; }
+
+  /* ---------- grid / cards ---------- */
+  .grid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    margin: 1rem 0;
+  }
+  .card {
+    background: var(--paper);
+    border: var(--border);
+    border-radius: var(--radius-panel);
+    padding: 20px 22px;
+  }
+
+  /* ---------- tables ---------- */
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--paper);
+    border: var(--border);
+    border-radius: var(--radius-panel);
+    overflow: hidden;
+  }
+  thead th {
+    text-align: left;
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--g500);
+    background: var(--g100);
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--g300);
+  }
+  tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--g100);
+    font-size: 14px;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+
+  /* ---------- details / collapsibles ---------- */
+  details {
+    border: var(--border);
+    border-radius: var(--radius-row);
+    padding: .6rem 1rem;
+    margin: .6rem 0;
+    background: var(--paper);
+  }
+  details[open] { background: var(--g100); }
+  summary { cursor: pointer; font-weight: 600; outline: none; }
+
+  /* ---------- buttons ---------- */
+  button {
+    font: inherit;
+    cursor: pointer;
+    padding: .5rem .95rem;
+    border-radius: var(--radius-row);
+    border: var(--border);
+    background: var(--paper);
+    color: var(--slate);
+  }
+  button:hover { background: var(--g100); }
+  button.primary {
+    background: var(--clay);
+    color: var(--paper);
+    border-color: var(--clay);
+  }
+  button.primary:hover { background: var(--clay-d); border-color: var(--clay-d); }
+
+  svg { max-width: 100%; height: auto; }
+
+  footer {
+    margin-top: 64px;
+    padding-top: 20px;
+    border-top: 1px solid var(--g300);
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--g500);
+  }
+
+  @media (max-width: 720px) { body { padding: 32px 18px 96px; } }
+</style>
+</head>
+<body>
+  <div class="page">
+
+    <!--
+      Starter structure — Anthropic warm-editorial. Delete what you don't need.
+      Signature moves: ivory background, mono eyebrow, serif h1 with optional
+      clay <em>, 1.5px warm borders, clay-accent callouts, mono chips.
+      Pick one of the 5 scenarios in references/playbook.md and replace below.
+    -->
+
+    <div class="eyebrow">Section · Context</div>
+    <h1>Document title with an optional <em>italic accent</em></h1>
+    <p class="subtitle">One-line summary — what is this, and why should I read it?</p>
+
+    <div class="callout">
+      <strong>TL;DR.</strong> Three bullets' worth of the most important takeaway,
+      in one sentence. If the reader stops here, they should still know the point.
+    </div>
+
+    <section>
+      <h2>Section</h2>
+      <hr class="rule">
+      <p>Replace with your content. If this information has spatial structure
+      (options to compare, a flow, a timeline), reach for the grid, a diff block,
+      or an SVG — not a bulleted list.</p>
+
+      <div class="grid">
+        <article class="card">
+          <h3>Example card <span class="chip ok">recommended</span></h3>
+          <p style="color: var(--g500);">One-sentence framing. Chips mark state; callouts mark emphasis.</p>
+        </article>
+        <article class="card">
+          <h3>Another card</h3>
+          <p style="color: var(--g500);">Grids are for comparing — use them whenever the user needs to weigh options.</p>
+        </article>
+      </div>
+    </section>
+
+    <details>
+      <summary>Collapsible appendix (delete if unused)</summary>
+      <p>Alternatives considered, raw data, supporting material.</p>
+    </details>
+
+    <footer>
+      Generated with the html-over-markdown skill.
+    </footer>
+
+  </div>
+</body>
+</html>
