@@ -159,14 +159,13 @@ Choose from these shapes. Each section gets ONE:
 The article must contain at least 3 moments where the writer talks TO the reader or manages their attention. These are not transitions. They are the writer acknowledging a human is reading.
 
 Examples:
-- "Bear with me on this -- it connects."
 - "Now here's the part that matters."
 - "You might be wondering why any of this matters for [specific audience]. Fair question."
 - "Let's step back for a second."
 - "Put all this together and you can see why..."
 - "So what does this actually mean in practice?"
 - "That sounds abstract. Here's what it looks like."
-
+these are jsut few exampples, you cna sue other phrases as wlel - as feel natural. 
 These must feel natural, not inserted. They work best at transitions between sections or before a complex explanation.
 
 ### 3D: Stat Embedding (replaces stat-stacking)
@@ -207,7 +206,6 @@ These are SECONDARY to the rules above. Check these AFTER drafting, not during.
 
 ```
 NEVER:
-- Use the em dash character "—" anywhere in the article (not in titles, headings, body text, or punctuation). Use a comma, colon, parentheses, or rewrite the sentence instead.
 - Fabricate personal stories, anecdotes, or experiences
 - Invent statistics or data points without named sources
 - Use "many experts believe" or "industry insiders say"
@@ -410,42 +408,6 @@ Word count: X | Human-feel score: X/100 | Format: [type]
 Authority mechanisms: [list of 2-3 used]
 Fabrication check: PASS (0 violations)
 ```
-
-### 8B: Downloadable Artifacts (Markdown + HTML)
-
-When the user wants a downloadable artifact — which is the default when this skill is invoked from the HappyCapy `/tools` page — save the final article as both Markdown and a self-contained HTML file.
-
-**Step 1:** Build a JSON metadata file with this exact shape:
-
-```json
-{
-  "title": "[Article title]",
-  "format": "[Explainer | Practitioner blog | Technical deep-dive | Thought leadership | Comparison/review | Case study]",
-  "word_count": 0,
-  "human_feel_score": 0,
-  "authority_mechanisms": ["Specific Examples", "Industry Knowledge", "Data Citation"],
-  "fabrication_check": "PASS (0 violations)",
-  "body": "[Full article body as plain Markdown string]"
-}
-```
-
-**Step 2:** Run the artifact script using its absolute path within the skill installation:
-
-```bash
-python3 ~/.claude/skills/human-article-writer/scripts/save_artifacts.py \
-  --input /tmp/haw-output.json \
-  --output-dir ./outputs/human-article-writer \
-  --basename article
-```
-
-**Step 3:** Confirm the two files exist and report them to the user:
-
-```
-Saved Markdown: ./outputs/human-article-writer/article.md
-Saved HTML:     ./outputs/human-article-writer/article.html
-```
-
-The HTML file is self-contained (inline CSS, no external dependencies) and can be opened directly in a browser, published as a standalone page, or converted further.
 
 ---
 
