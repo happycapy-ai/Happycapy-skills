@@ -1,0 +1,23 @@
+{
+  "skill_name": "coral-geyser-notice-pptx",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "coral geyser notice deck for a hiking trail guide — 'Ridgeline Path'. 9 slides. Generate images with AI.",
+      "expected_output": "An editable 9-slide widescreen .pptx with coral-red (#E95140) background fields, warm stone (#E7D8D1) typography, bold geometric sans titles, split-screen layouts, AI-generated cool blue-white landscape images, and notice-style compact copy. No fixed sample content like Yellowstone or Old Faithful.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "prompt": "Make a Coral Geyser Notice presentation for our company offsite event 'Summit 2026'. 9 slides. I'll upload photos later — just leave image placeholder boxes.",
+      "expected_output": "An editable 9-slide .pptx in Coral Geyser Notice style — coral background, stone typography, split-screen layouts with placeholder rectangles on image panels, bold event schedule grid slide, safety/logistics notice card, no generated images.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "/coral-geyser-notice-pptx build me a 9-slide field guide deck for a new coffee brewing method called 'Cold Stone Press'. Generate images.",
+      "expected_output": "An editable 9-slide .pptx for Cold Stone Press in Coral Geyser Notice style. Topic translated into a field guide / visitor notice framing for a coffee product. AI-generated cool blue-white atmospheric images. Compact notice-language copy — no dense product paragraphs. No fixed Yellowstone-style sample content.",
+      "files": []
+    }
+  ]
+}

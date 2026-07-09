@@ -1,0 +1,23 @@
+{
+  "skill_name": "olive-rose-salon-pptx",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "I need an Olive Rose Salon deck for my new fragrance brand 'Verdana Noir'. 8 slides. Generate the images with AI — botanical abstract style.",
+      "expected_output": "An editable 8-slide widescreen .pptx file with dark olive-brown (#372E19) background, pale pink (#FFE1FC) headlines, poster-style typography, Georgia serif for titles, generated botanical abstract images inserted into mood/image plates, and no template placeholder text visible.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "prompt": "Make an olive rose salon presentation for our spring gallery show 'Tender Light'. I want 10 slides. Use uploaded images — I'll add them myself later, just leave placeholder image boxes.",
+      "expected_output": "An editable 10-slide .pptx file in Olive Rose Salon style — dark olive background, pink typography, poster hierarchy — with large rectangular image placeholder boxes on the image-led slides (filled with a solid shape or placeholder rect in place of actual images), correct font sizes and layout structure, and no visible internal notes.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "olive rose salon deck for a product launch — 'Séléné Candles', hand-poured botanical candles. I only have the brand name. Give me 8 slides with AI-generated images.",
+      "expected_output": "An editable 8-slide .pptx file for Séléné Candles in Olive Rose Salon style. All content inferred from the brand name and aesthetic — the deck should feel coherent and exhibition-like. Botanical abstract images generated and inserted. No fixed sample content like 'FILANTE BLOOM' or Paris addresses on the slides.",
+      "files": []
+    }
+  ]
+}
