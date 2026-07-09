@@ -17,7 +17,7 @@
   <p>
     <img src="https://img.shields.io/github/stars/happycapy-ai/Happycapy-skills?style=flat-square" alt="GitHub stars" />
     <img src="https://img.shields.io/github/license/happycapy-ai/Happycapy-skills?style=flat-square" alt="License" />
-    <img src="https://img.shields.io/badge/skills-51-3b82f6?style=flat-square" alt="51 skills" />
+    <img src="https://img.shields.io/badge/skills-54-3b82f6?style=flat-square" alt="54 skills" />
     <img src="https://img.shields.io/badge/curation-Happycapy-f59e0b?style=flat-square" alt="Curated by Happycapy" />
   </p>
 </div>
@@ -116,7 +116,7 @@ inside that skill folder and move with it.
 
 ## Skill Catalog
 
-The full catalog currently includes **51 skills** across seven collections.
+The full catalog currently includes **54 skills** across seven collections.
 
 <details>
 <summary><strong>Agent Systems and Workflow (8)</strong></summary>
@@ -133,7 +133,7 @@ The full catalog currently includes **51 skills** across seven collections.
 </details>
 
 <details>
-<summary><strong>App, Web, and Product Development (9)</strong></summary>
+<summary><strong>App, Web, and Product Development (10)</strong></summary>
 
 - [`next-best-practices`](./skills/next-best-practices/) - Apply strong Next.js conventions for modern product teams.
 - [`better-auth-best-practices`](./skills/better-auth-best-practices/) - Integrate Better Auth cleanly in TypeScript applications.
@@ -141,6 +141,7 @@ The full catalog currently includes **51 skills** across seven collections.
 - [`supabase-postgres-best-practices`](./skills/supabase-postgres-best-practices/) - Improve Postgres design and performance on Supabase.
 - [`3d-web-experience`](./skills/3d-web-experience/) - Craft immersive 3D web experiences with modern browser tooling.
 - [`mobile-design`](./skills/mobile-design/) - Make better product decisions for iOS and Android interfaces.
+- [`mobile-app-developer`](./skills/mobile-app-developer/) - Build full mobile apps with native-quality patterns and cross-platform guidance.
 - [`create-design-system-rules`](./skills/create-design-system-rules/) - Generate design system rules for a real codebase from Figma context.
 - [`goplaces`](./skills/goplaces/) - Query Google Places through a human-friendly or scriptable CLI.
 - [`360-panorama-viewer`](./skills/360-panorama-viewer/) - Build standalone immersive panorama viewers as single HTML files.
@@ -148,13 +149,14 @@ The full catalog currently includes **51 skills** across seven collections.
 </details>
 
 <details>
-<summary><strong>Design, Documents, and Presentations (11)</strong></summary>
+<summary><strong>Design, Documents, and Presentations (12)</strong></summary>
 
 - [`canvas-design`](./skills/canvas-design/) - Create polished visual pieces in PNG and PDF format.
 - [`frontend-slides`](./skills/frontend-slides/) - Produce animation-rich HTML slide decks.
 - [`pptx`](./skills/pptx/) - Generate editable, polished PowerPoint presentations.
 - [`pdf`](./skills/pdf/) - Read, extract, merge, OCR, fill, and generate PDFs.
 - [`latex-document`](./skills/latex-document/) - Produce professional LaTeX documents and PDF outputs.
+- [`html-over-markdown`](./skills/html-over-markdown/) - Render rich formatted output as HTML instead of plain markdown.
 - [`data-storytelling`](./skills/data-storytelling/) - Turn analysis into narratives that stakeholders can act on.
 - [`writing-clearly-and-concisely`](./skills/writing-clearly-and-concisely/) - Strengthen prose for documentation, UI, and reports.
 - [`prompt-improver`](./skills/prompt-improver/) - Rewrite vague prompts into specific, usable instructions.
@@ -165,9 +167,10 @@ The full catalog currently includes **51 skills** across seven collections.
 </details>
 
 <details>
-<summary><strong>Media and Creative AI (9)</strong></summary>
+<summary><strong>Media and Creative AI (10)</strong></summary>
 
 - [`ai-image-generation`](./skills/ai-image-generation/) - Generate or edit images with dozens of hosted models.
+- [`generate-image`](./skills/generate-image/) - Generate and transform images using the AI Gateway with multi-model support.
 - [`nano-banana-pro`](./skills/nano-banana-pro/) - Use Gemini 3 Pro Image for image generation and editing.
 - [`ai-video-generation`](./skills/ai-video-generation/) - Generate videos with a broad model catalog via inference.sh.
 - [`film-creator`](./skills/film-creator/) - Turn a sentence or image into a short cinematic film workflow.
