@@ -207,12 +207,12 @@ The full catalog currently includes **54 skills** across seven collections.
 
 Each skill in this collection locks in a complete visual identity on top of the `pptx` skill foundation. Trigger one by naming its style, then answer three questions — topic, slide count, and image handling — and receive a fully editable widescreen `.pptx` file with the style applied throughout.
 
-- [`olive-rose`](./skills/olive-rose-salon-pptx/) - Dark olive-brown background, pale pink typography, high-fashion art exhibition poster aesthetic. For brand launches, fragrance, fashion, gallery events, and any topic reframed as a luxury poster sequence.
-- [`coral-geyser`](./skills/coral-geyser-notice-pptx/) - Coral-red background, warm stone typography, bold split-screen visitor-notice and field-guide aesthetic. For travel guides, event notices, product usage guides, and operational poster sequences.
-- [`azure-host`](./skills/azure-host-forum-pptx/) - Sky-blue background, deep green typography, circular portrait frames, bold industry-sharing event aesthetic. For speaker forums, panel events, founder briefings, and creative industry presentations.
-- [`apricot-ritual`](./skills/apricot-ritual-index-pptx/) - Warm apricot background, cocoa-brown typography, refined minimalist editorial poster aesthetic. For product rituals, wellness launches, lifestyle brands, and typographic poster sequences.
-- [`botanical-blur`](./skills/botanical-blur-system-pptx/) - Warm cream editorial layouts with botanical motion-blur textures, sky blue and deep green accents. For workshops, brand storytelling, organic product decks, and varied multi-slide editorial presentations.
-- [`signal-green`](./skills/signal-green-atlas-pptx/) - Fluorescent green background, black typography, black-and-white imagery only, bold avant-garde atlas aesthetic. For guidebooks, editorial atlases, bold brand presentations, and information-grid-heavy decks.
+- [`olive-rose`](./skills/olive-rose/) - Dark olive-brown background, pale pink typography, high-fashion art exhibition poster aesthetic. For brand launches, fragrance, fashion, gallery events, and any topic reframed as a luxury poster sequence.
+- [`coral-geyser`](./skills/coral-geyser/) - Coral-red background, warm stone typography, bold split-screen visitor-notice and field-guide aesthetic. For travel guides, event notices, product usage guides, and operational poster sequences.
+- [`azure-host`](./skills/azure-host/) - Sky-blue background, deep green typography, circular portrait frames, bold industry-sharing event aesthetic. For speaker forums, panel events, founder briefings, and creative industry presentations.
+- [`apricot-ritual`](./skills/apricot-ritual/) - Warm apricot background, cocoa-brown typography, refined minimalist editorial poster aesthetic. For product rituals, wellness launches, lifestyle brands, and typographic poster sequences.
+- [`botanical-blur`](./skills/botanical-blur/) - Warm cream editorial layouts with botanical motion-blur textures, sky blue and deep green accents. For workshops, brand storytelling, organic product decks, and varied multi-slide editorial presentations.
+- [`signal-green`](./skills/signal-green/) - Fluorescent green background, black typography, black-and-white imagery only, bold avant-garde atlas aesthetic. For guidebooks, editorial atlases, bold brand presentations, and information-grid-heavy decks.
 
 </details>
 
