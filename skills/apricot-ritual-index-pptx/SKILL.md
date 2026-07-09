@@ -1,5 +1,5 @@
 ---
-name: apricot-ritual-index-pptx
+name: apricot-ritual
 description: "Reusable fixed-style PPTX generation skill for the Apricot Ritual Index visual brand — warm apricot background (#FDDEB6), cocoa-brown typography (#6C4832), refined minimalist editorial poster aesthetic, elegant serif titles, narrow-sans labels, centered word stacks, thin horizontal rules, sparse image placement, widescreen 16:9 editable .pptx output. Use this skill whenever the user mentions Apricot Ritual Index, asks for a warm apricot minimalist presentation, wants a refined product-poster or ritual-index style deck, or requests a presentation using the Apricot Ritual Index visual system. Also trigger when the user says 'apricot ritual', 'ritual index deck', 'apricot minimalist slides', 'product poster presentation', 'ritual index pptx', 'editorial poster deck', 'typographic poster presentation', or 'warm apricot slides' in any context."
 ---
 

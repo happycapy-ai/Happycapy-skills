@@ -1,5 +1,5 @@
 ---
-name: signal-green-atlas-pptx
+name: signal-green
 description: "Reusable fixed-style PPTX generation skill for the Signal Green Atlas visual brand — fluorescent green (#0CDA76) dominant background, black (#000000) typography and rules, black-and-white imagery only, bold avant-garde editorial atlas aesthetic, oversized uppercase grotesk headlines, strict two-column information grids, sharp rectangular photo windows, black circular bullets, deliberate asymmetry, widescreen 16:9 editable .pptx output. Use this skill whenever the user mentions Signal Green Atlas, asks for a fluorescent-green editorial presentation, wants an avant-garde atlas or guidebook-style deck, requests a bold black-and-green presentation, or needs a deck using strict information grids and monochrome imagery. Also trigger for 'signal green', 'signal green atlas', 'fluorescent green deck', 'atlas pptx', 'black and green presentation', 'avant-garde atlas deck', 'guidebook style slides', or 'editorial atlas presentation'."
 ---
 

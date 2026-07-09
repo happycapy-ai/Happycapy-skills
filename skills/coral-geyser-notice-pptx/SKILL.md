@@ -1,5 +1,5 @@
 ---
-name: coral-geyser-notice-pptx
+name: coral-geyser
 description: "Reusable fixed-style PPTX generation skill for the Coral Geyser Notice visual brand — coral-red background (#E95140), warm stone typography (#E7D8D1), bold modern visitor-notice and design-forward travel guide aesthetic, heavy geometric sans titles, strong split-screen compositions, widescreen 16:9 editable .pptx output. Use this skill whenever the user mentions Coral Geyser Notice, asks for a presentation or deck in the Coral Geyser style, wants a visitor notice deck, travel guide deck, field guide presentation, park-hours-poster-style PowerPoint, route card deck, or mentions coral-red with warm stone typography for slides. Also trigger when the user says 'coral geyser', 'notice deck', 'visitor guide deck', 'field guide slides', 'travel notice presentation', 'park guide deck', or 'route card presentation' in any context."
 ---
 
