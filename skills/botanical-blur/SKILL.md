@@ -1,5 +1,5 @@
 ---
-name: botanical-blur
+name: botanical-blur-pptx
 description: "Reusable fixed-style PPTX generation skill for the Botanical Blur System visual brand — warm cream (#F7F4EA) editorial layouts, botanical motion-blur textures, sky blue (#3D8FD9), deep green (#0E5A3D), muted coral (#D9573F), dark slate (#2B302F), white leaf-outline motifs, varied slide family with full-bleed texture slides, curved bands, rounded panels, and structured grids. Widescreen 16:9 editable .pptx output. Use this skill whenever the user mentions Botanical Blur System, asks for a botanical motion-blur or organic editorial deck, wants cream editorial layouts with botanical textures, or asks for a botanical-style workshop, strategy, brand, product, or storytelling deck. Also trigger for 'botanical blur', 'botanical blur system', 'organic editorial deck', 'botanical pptx', 'cream botanical slides', 'blurred botanical presentation', or 'premium organic presentation'."
 ---
 

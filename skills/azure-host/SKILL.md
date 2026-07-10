@@ -1,5 +1,5 @@
 ---
-name: azure-host
+name: azure-host-pptx
 description: "Reusable fixed-style PPTX generation skill for the Azure Host Forum visual brand — sky-blue background (#65AEFF), deep green typography (#07461E), olive side-panel accent (#728E03), cream portrait/detail color (#F1F0EA), bold contemporary industry sharing event aesthetic, oversized condensed grotesk titles, strong left-text / right-speaker-column composition, circular portrait frames, widescreen 16:9 editable .pptx output. Use this skill whenever the user mentions Azure Host Forum, asks for a presentation or deck in the Azure Host Forum style, wants a forum or industry-sharing deck, speaker event deck, expert talk slides, panel presentation, creative industry event deck, founder briefing slides, or any event/forum-style PowerPoint. Also trigger when the user says 'azure host forum', 'forum deck', 'speaker event slides', 'industry sharing presentation', 'host forum pptx', 'panel deck', 'workshop deck', or 'creative industry event slides' in any context."
 ---
 

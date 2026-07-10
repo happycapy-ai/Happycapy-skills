@@ -1,5 +1,5 @@
 ---
-name: olive-rose
+name: olive-rose-pptx
 description: "Reusable fixed-style PPTX generation skill for the Olive Rose Salon visual brand — dark olive-brown background (#372E19), pale pink typography (#FFE1FC), high-fashion art exhibition poster aesthetic, large serif title type, widescreen 16:9 editable .pptx output. Use this skill whenever the user mentions Olive Rose Salon, asks for a presentation or deck in the Olive Rose style, wants an exhibition poster deck, needs a high-fashion poster-led PowerPoint, or mentions the olive-brown/pale-pink color scheme for slides. Also trigger when the user says 'olive rose', 'salon deck', 'poster presentation', or 'fashion deck' in any context."
 ---
 
