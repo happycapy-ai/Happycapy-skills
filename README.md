@@ -17,7 +17,7 @@
   <p>
     <img src="https://img.shields.io/github/stars/happycapy-ai/Happycapy-skills?style=flat-square" alt="GitHub stars" />
     <img src="https://img.shields.io/github/license/happycapy-ai/Happycapy-skills?style=flat-square" alt="License" />
-    <img src="https://img.shields.io/badge/skills-54-3b82f6?style=flat-square" alt="54 skills" />
+    <img src="https://img.shields.io/badge/skills-55-3b82f6?style=flat-square" alt="55 skills" />
     <img src="https://img.shields.io/badge/curation-Happycapy-f59e0b?style=flat-square" alt="Curated by Happycapy" />
   </p>
 </div>
@@ -116,7 +116,7 @@ inside that skill folder and move with it.
 
 ## Skill Catalog
 
-The full catalog currently includes **54 skills** across seven collections.
+The full catalog currently includes **55 skills** across seven collections.
 
 <details>
 <summary><strong>Agent Systems and Workflow (8)</strong></summary>
@@ -167,7 +167,7 @@ The full catalog currently includes **54 skills** across seven collections.
 </details>
 
 <details>
-<summary><strong>Media and Creative AI (10)</strong></summary>
+<summary><strong>Media and Creative AI (11)</strong></summary>
 
 - [`ai-image-generation`](./skills/ai-image-generation/) - Generate or edit images with dozens of hosted models.
 - [`generate-image`](./skills/generate-image/) - Generate and transform images using the AI Gateway with multi-model support.
@@ -175,6 +175,7 @@ The full catalog currently includes **54 skills** across seven collections.
 - [`ai-video-generation`](./skills/ai-video-generation/) - Generate videos with a broad model catalog via inference.sh.
 - [`film-creator`](./skills/film-creator/) - Turn a sentence or image into a short cinematic film workflow.
 - [`capy-video-gen-skill`](./skills/capy-video-gen-skill/) - Build multi-shot AI videos with character consistency.
+- [`gbro-collage-broll`](./skills/gbro-collage-broll/) - Turn a voiceover script into segmented, narrated halftone paper-collage B-roll.
 - [`video-downloader`](./skills/video-downloader/) - Download videos for offline viewing, editing, or archival.
 - [`video-frames`](./skills/video-frames/) - Extract frames or short clips with ffmpeg.
 - [`slack-gif-creator`](./skills/slack-gif-creator/) - Create Slack-friendly animated GIFs within size limits.
