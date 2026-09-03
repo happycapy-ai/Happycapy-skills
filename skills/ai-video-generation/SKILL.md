@@ -1,19 +1,22 @@
 ---
 name: ai-video-generation
 description: |
-  Generate AI videos with Google Veo, Seedance, Wan, Grok and 40+ models via inference.sh CLI.
+  Generate AI videos with Google Veo, Seedance, Wan, Grok and 40+ models via inference.sh CLI, with Atlas Cloud as an optional provider.
   Models: Veo 3.1, Veo 3, Seedance 1.5 Pro, Wan 2.5, Grok Imagine Video, OmniHuman, Fabric, HunyuanVideo.
   Capabilities: text-to-video, image-to-video, lipsync, avatar animation, video upscaling, foley sound.
   Use for: social media videos, marketing content, explainer videos, product demos, AI avatars.
   Triggers: video generation, ai video, text to video, image to video, veo, animate image,
   video from image, ai animation, video generator, generate video, t2v, i2v, ai video maker,
   create video with ai, runway alternative, pika alternative, sora alternative, kling alternative
-allowed-tools: Bash(infsh *)
+allowed-tools: Bash(infsh *) Bash(python3 *)
 ---
 
 # AI Video Generation
 
 Generate videos with 40+ AI models via [inference.sh](https://inference.sh) CLI.
+
+The `infsh` examples remain the default workflow. For a direct Atlas Cloud
+text-to-video request, use the optional adapter described below.
 
 ## Quick Start
 
@@ -70,6 +73,37 @@ infsh app run google/veo-3-1-fast --input '{"prompt": "drone shot flying over a 
 ```bash
 infsh app list --category video
 ```
+
+## Optional Atlas Cloud Provider
+
+The bundled adapter discovers the requested video model in Atlas Cloud's live
+catalog, validates options against its current schema, and prints a preflight
+plan before any billable request. It submits generation exactly once; only
+result polling uses bounded retries.
+
+```bash
+export ATLASCLOUD_API_KEY="your-api-key"
+
+# Preflight only: validates the live model and schema without submitting.
+python3 scripts/atlas_video.py \
+  --prompt "A paper boat crossing a quiet pond" \
+  --output ./paper-boat.mp4
+
+# After reviewing the model and unit price, confirm one generation request.
+python3 scripts/atlas_video.py \
+  --prompt "A paper boat crossing a quiet pond" \
+  --output ./paper-boat.mp4 \
+  --duration 4 \
+  --resolution 480p \
+  --aspect-ratio 16:9 \
+  --yes
+```
+
+The default Atlas model is
+`bytedance/seedance-v1-pro-fast/text-to-video`. Override it with `--model`
+when another visible Atlas video model exposes the same input fields. The
+adapter saves the video plus a `.meta.json` receipt containing the model,
+prediction ID, submitted options, catalog unit price, and output URL.
 
 ## Examples
 

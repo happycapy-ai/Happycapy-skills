@@ -172,7 +172,7 @@ The full catalog currently includes **58 skills** across seven collections.
 - [`ai-image-generation`](./skills/ai-image-generation/) - Generate or edit images with dozens of hosted models.
 - [`generate-image`](./skills/generate-image/) - Generate and transform images using the AI Gateway with multi-model support.
 - [`nano-banana-pro`](./skills/nano-banana-pro/) - Use Gemini 3 Pro Image for image generation and editing.
-- [`ai-video-generation`](./skills/ai-video-generation/) - Generate videos with a broad model catalog via inference.sh.
+- [`ai-video-generation`](./skills/ai-video-generation/) - Generate videos via inference.sh or the optional Atlas Cloud adapter.
 - [`film-creator`](./skills/film-creator/) - Turn a sentence or image into a short cinematic film workflow.
 - [`capy-video-gen-skill`](./skills/capy-video-gen-skill/) - Build multi-shot AI videos with character consistency.
 - [`gbro-collage-broll`](./skills/gbro-collage-broll/) - Turn a voiceover script into segmented, narrated halftone paper-collage B-roll.
