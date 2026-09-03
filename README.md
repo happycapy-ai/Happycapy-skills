@@ -191,6 +191,8 @@ The full catalog currently includes **58 skills** across seven collections.
 - [`reddit-post-skill`](./skills/reddit-post-skill/) - Use an alternate Reddit writing workflow with committee-style review.
 - [`redbook-creator-publish`](./skills/redbook-creator-publish/) - Draft, illustrate, preview, and publish Xiaohongshu posts.
 - [`xiaohongshu-recruiter`](./skills/xiaohongshu-recruiter/) - Publish AI recruiting posts tailored for Xiaohongshu.
+- [`linkedin`](./skills/linkedin/) - Fetch LinkedIn profiles, search people and companies, send messages, manage connections, create posts, react, comment, and run custom LinkedIn workflows from Claude Code, Codex, Cursor, and Windsurf.
+- [`linkedin-growth`](./skills/linkedin-growth/) - Import leads from LinkedIn or Sales Navigator searches, qualify them against an ideal-customer profile, schedule safe connection invites across accounts, track acceptances, and withdraw stale pending requests.
 - [`happycapy-social-publisher`](./skills/happycapy-social-publisher/) - Cross-post content to 13+ social platforms from one workflow.
 
 </details>
