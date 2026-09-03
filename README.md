@@ -17,7 +17,7 @@
   <p>
     <img src="https://img.shields.io/github/stars/happycapy-ai/Happycapy-skills?style=flat-square" alt="GitHub stars" />
     <img src="https://img.shields.io/github/license/happycapy-ai/Happycapy-skills?style=flat-square" alt="License" />
-    <img src="https://img.shields.io/badge/skills-55-3b82f6?style=flat-square" alt="55 skills" />
+    <img src="https://img.shields.io/badge/skills-56-3b82f6?style=flat-square" alt="56 skills" />
     <img src="https://img.shields.io/badge/curation-Happycapy-f59e0b?style=flat-square" alt="Curated by Happycapy" />
   </p>
 </div>
@@ -116,7 +116,7 @@ inside that skill folder and move with it.
 
 ## Skill Catalog
 
-The full catalog currently includes **55 skills** across seven collections.
+The full catalog currently includes **56 skills** across seven collections.
 
 <details>
 <summary><strong>Agent Systems and Workflow (8)</strong></summary>
@@ -204,7 +204,7 @@ The full catalog currently includes **55 skills** across seven collections.
 </details>
 
 <details>
-<summary><strong>PPTX Style Systems (6)</strong></summary>
+<summary><strong>PPTX Style Systems (7)</strong></summary>
 
 Each skill in this collection locks in a complete visual identity on top of the `pptx` skill foundation. Trigger one by naming its style, then answer three questions — topic, slide count, and image handling — and receive a fully editable widescreen `.pptx` file with the style applied throughout.
 
@@ -214,6 +214,7 @@ Each skill in this collection locks in a complete visual identity on top of the 
 - [`apricot-ritual`](./skills/apricot-ritual/) - Warm apricot background, cocoa-brown typography, refined minimalist editorial poster aesthetic. For product rituals, wellness launches, lifestyle brands, and typographic poster sequences.
 - [`botanical-blur`](./skills/botanical-blur/) - Warm cream editorial layouts with botanical motion-blur textures, sky blue and deep green accents. For workshops, brand storytelling, organic product decks, and varied multi-slide editorial presentations.
 - [`signal-green`](./skills/signal-green/) - Fluorescent green background, black typography, black-and-white imagery only, bold avant-garde atlas aesthetic. For guidebooks, editorial atlases, bold brand presentations, and information-grid-heavy decks.
+- [`acid-labels`](./skills/acid-labels/) - Acid-green operating-guide aesthetic on hard-edged modular panels, deep forest plates, black pill labels and tag chips, oversized italic serif `{curly-brace}` title moments. For playbooks, operating guides, decision systems, and data-native, label-driven decks.
 
 </details>
 
