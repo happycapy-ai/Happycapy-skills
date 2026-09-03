@@ -17,7 +17,7 @@
   <p>
     <img src="https://img.shields.io/github/stars/happycapy-ai/Happycapy-skills?style=flat-square" alt="GitHub stars" />
     <img src="https://img.shields.io/github/license/happycapy-ai/Happycapy-skills?style=flat-square" alt="License" />
-    <img src="https://img.shields.io/badge/skills-56-3b82f6?style=flat-square" alt="56 skills" />
+    <img src="https://img.shields.io/badge/skills-57-3b82f6?style=flat-square" alt="57 skills" />
     <img src="https://img.shields.io/badge/curation-Happycapy-f59e0b?style=flat-square" alt="Curated by Happycapy" />
   </p>
 </div>
@@ -71,7 +71,7 @@ assembling a toolbox from scratch.
 | Agent systems | Multi-agent orchestration, skill discovery, self-improvement, and autonomous contribution workflows | Extending Claude, internal tooling, agent teams |
 | App and web development | Next.js, Better Auth, Expo Router, Supabase Postgres, design systems, immersive UI | Shipping apps faster with stronger defaults |
 | Design and documents | Slides, PowerPoint, PDFs, LaTeX, storytelling, writing, and prompt refinement | Client deliverables, reports, documentation |
-| PPTX style systems | Six fixed-style PowerPoint skills, each locking in a distinct visual identity — from exhibition posters to field guides to forum decks | Branded decks, event materials, product launches |
+| PPTX style systems | Eight fixed-style PowerPoint skills, each locking in a distinct visual identity — from exhibition posters to field guides to calendar-native productivity decks | Branded decks, event materials, product launches |
 | Media and creative AI | Image generation, video generation, film workflows, frame extraction, GIF creation | Visual content, prototypes, creative production |
 | Social and creator workflows | Reddit, Xiaohongshu, Instagram carousel creation, and multi-platform publishing | Marketing, community growth, recruiting |
 | Happycapy integrations | Feishu MCP, utilities, and environment-specific tools | Connected workflows inside Happycapy |
@@ -116,7 +116,7 @@ inside that skill folder and move with it.
 
 ## Skill Catalog
 
-The full catalog currently includes **56 skills** across seven collections.
+The full catalog currently includes **57 skills** across seven collections.
 
 <details>
 <summary><strong>Agent Systems and Workflow (8)</strong></summary>
@@ -204,7 +204,7 @@ The full catalog currently includes **56 skills** across seven collections.
 </details>
 
 <details>
-<summary><strong>PPTX Style Systems (7)</strong></summary>
+<summary><strong>PPTX Style Systems (8)</strong></summary>
 
 Each skill in this collection locks in a complete visual identity on top of the `pptx` skill foundation. Trigger one by naming its style, then answer three questions — topic, slide count, and image handling — and receive a fully editable widescreen `.pptx` file with the style applied throughout.
 
@@ -215,6 +215,7 @@ Each skill in this collection locks in a complete visual identity on top of the 
 - [`botanical-blur`](./skills/botanical-blur/) - Warm cream editorial layouts with botanical motion-blur textures, sky blue and deep green accents. For workshops, brand storytelling, organic product decks, and varied multi-slide editorial presentations.
 - [`signal-green`](./skills/signal-green/) - Fluorescent green background, black typography, black-and-white imagery only, bold avant-garde atlas aesthetic. For guidebooks, editorial atlases, bold brand presentations, and information-grid-heavy decks.
 - [`acid-labels`](./skills/acid-labels/) - Acid-green operating-guide aesthetic on hard-edged modular panels, deep forest plates, black pill labels and tag chips, oversized italic serif `{curly-brace}` title moments. For playbooks, operating guides, decision systems, and data-native, label-driven decks.
+- [`gradient-calendar`](./skills/gradient-calendar/) - Pale-gray calendar-native productivity aesthetic with oversized near-black date numerals, electric-lime schedule blocks, saturated-blue vertical labels, and soft cyan-lime-lavender gradient washes on strict calendar grids. For planners, roadmaps, schedules, agenda-poster covers, and calendar-led productivity decks.
 
 </details>
 
