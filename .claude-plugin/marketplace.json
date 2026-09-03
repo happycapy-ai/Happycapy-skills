@@ -1,0 +1,31 @@
+{
+  "name": "happycapy-skills",
+  "owner": {
+    "name": "Happycapy",
+    "url": "https://happycapy.ai"
+  },
+  "plugins": [
+    {
+      "name": "happycapy-skills",
+      "source": "./",
+      "description": "Curated collection of 55 production-ready skills for coding, design, documents, media, research, and automation.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Happycapy",
+        "url": "https://happycapy.ai"
+      },
+      "homepage": "https://happycapy.ai",
+      "repository": "https://github.com/Kirchlive/Happycapy-skills",
+      "license": "MIT",
+      "category": "productivity",
+      "keywords": [
+        "skills",
+        "design",
+        "documents",
+        "media",
+        "research",
+        "automation"
+      ]
+    }
+  ]
+}
