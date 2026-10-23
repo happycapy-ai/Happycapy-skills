@@ -17,7 +17,7 @@
   <p>
     <img src="https://img.shields.io/github/stars/happycapy-ai/Happycapy-skills?style=flat-square" alt="GitHub stars" />
     <img src="https://img.shields.io/github/license/happycapy-ai/Happycapy-skills?style=flat-square" alt="License" />
-    <img src="https://img.shields.io/badge/skills-58-3b82f6?style=flat-square" alt="58 skills" />
+    <img src="https://img.shields.io/badge/skills-59-3b82f6?style=flat-square" alt="59 skills" />
     <img src="https://img.shields.io/badge/curation-Happycapy-f59e0b?style=flat-square" alt="Curated by Happycapy" />
   </p>
 </div>
@@ -116,7 +116,7 @@ inside that skill folder and move with it.
 
 ## Skill Catalog
 
-The full catalog currently includes **58 skills** across seven collections.
+The full catalog currently includes **59 skills** across seven collections.
 
 <details>
 <summary><strong>Agent Systems and Workflow (8)</strong></summary>
@@ -133,7 +133,7 @@ The full catalog currently includes **58 skills** across seven collections.
 </details>
 
 <details>
-<summary><strong>App, Web, and Product Development (10)</strong></summary>
+<summary><strong>App, Web, and Product Development (11)</strong></summary>
 
 - [`next-best-practices`](./skills/next-best-practices/) - Apply strong Next.js conventions for modern product teams.
 - [`better-auth-best-practices`](./skills/better-auth-best-practices/) - Integrate Better Auth cleanly in TypeScript applications.
@@ -145,6 +145,7 @@ The full catalog currently includes **58 skills** across seven collections.
 - [`create-design-system-rules`](./skills/create-design-system-rules/) - Generate design system rules for a real codebase from Figma context.
 - [`goplaces`](./skills/goplaces/) - Query Google Places through a human-friendly or scriptable CLI.
 - [`360-panorama-viewer`](./skills/360-panorama-viewer/) - Build standalone immersive panorama viewers as single HTML files.
+- [`deed-page`](./skills/deed-page/) - Publish a generated HTML file or static folder to a permanent public URL with one `curl` request, no account needed.
 
 </details>
 
